@@ -1,6 +1,24 @@
 # The Small Business AI Roadmap: From Strategy to Implementation
 
-## Book 4 of The Small Business AI Revolution Series
+**Book 4 of The Small Business AI Revolution Series**
+
+**By Adaryus Gillum**
+
+---
+
+## Copyright Page
+
+Copyright © 2026 by Adaryus Gillum. All rights reserved.
+
+No part of this publication may be reproduced, distributed, or transmitted in any form or by any means, including photocopying, recording, or other electronic or mechanical methods, without the prior written permission of the publisher, except in the case of brief quotations embodied in critical reviews and certain other noncommercial uses permitted by copyright law.
+
+**Author:** Adaryus Gillum
+
+**Publisher:** The Small Business AI Revolution Series
+
+**First Edition:** 2026
+
+**Disclaimer:** This book is for informational purposes only. The author and publisher disclaim any liability for any loss or damage arising from the use of information contained in this book. While every effort has been made to ensure the accuracy of the information presented, the field of artificial intelligence is rapidly evolving, and readers should verify current information before making business decisions.
 
 ---
 
@@ -3348,19 +3366,50 @@ Your AI journey begins now. The future belongs to those who take the first step.
 
 ---
 
-## About This Series
+# References and Works Cited
 
-"The Small Business AI Revolution Series" is designed to help small business owners navigate the AI transformation. Each book addresses a different aspect of the AI journey:
+## MLA Format (9th Edition)
 
-- **Book 1**: AI for the Rest of Us - Understanding AI fundamentals
-- **Book 2**: [Additional books in series]
-- **Book 3**: [Additional books in series]
-- **Book 4**: The Small Business AI Roadmap - From Strategy to Implementation (this book)
+Anthropic. *Claude: AI Assistant*. Anthropic, 2024, www.anthropic.com.
 
-For additional resources, templates, and updates, visit [website/resource location].
+Gartner Inc. "AI and Machine Learning." *Gartner Research*, 2024, www.gartner.com.
+
+Google LLC. *Google Cloud AI*. Google, 2024, cloud.google.com/ai.
+
+McKinsey & Company. "AI Adoption in Small Business." *McKinsey Insights*, 2024, www.mckinsey.com.
+
+Microsoft Corporation. *Power Platform AI Builder*. Microsoft, 2024, powerapps.microsoft.com.
+
+OpenAI. *ChatGPT: Conversational AI*. OpenAI, 2024, openai.com.
+
+Salesforce Inc. *Einstein AI*. Salesforce, 2024, www.salesforce.com/einstein.
+
+## APA Format (7th Edition)
+
+Anthropic. (2024). *Claude: AI assistant*. https://www.anthropic.com
+
+Gartner Inc. (2024). AI and machine learning. *Gartner Research*. https://www.gartner.com
+
+Google LLC. (2024). *Google Cloud AI*. https://cloud.google.com/ai
+
+McKinsey & Company. (2024). AI adoption in small business. *McKinsey Insights*. https://www.mckinsey.com
+
+Microsoft Corporation. (2024). *Power Platform AI Builder*. https://powerapps.microsoft.com
+
+OpenAI. (2024). *ChatGPT: Conversational AI*. https://openai.com
+
+Salesforce Inc. (2024). *Einstein AI*. https://www.salesforce.com/einstein
 
 ---
 
-*Copyright © 2026. All rights reserved.*
+## About the Author
 
-*No part of this publication may be reproduced, distributed, or transmitted in any form or by any means without the prior written permission of the publisher.*
+**Adaryus Gillum** is a leading voice in the democratization of artificial intelligence for small businesses. With extensive experience in technology implementation and business transformation, Gillum has dedicated his career to helping small business owners understand and leverage AI technologies to compete more effectively in the modern marketplace. Through *The Small Business AI Revolution Series*, he provides practical, accessible guidance that bridges the gap between cutting-edge technology and everyday business applications.
+
+---
+
+*End of Book 4: The Small Business AI Roadmap*
+
+**By Adaryus Gillum**
+
+*Next: Book 5 - AI on a Budget: Smart Implementation Strategies for Cash-Conscious Companies*

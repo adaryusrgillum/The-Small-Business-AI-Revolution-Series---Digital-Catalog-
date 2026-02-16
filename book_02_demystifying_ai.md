@@ -1,6 +1,24 @@
 # Demystifying AI: What Every Small Business Needs to Know Before Getting Started
 
-## Book 2 of The Small Business AI Revolution Series
+**Book 2 of The Small Business AI Revolution Series**
+
+**By Adaryus Gillum**
+
+---
+
+## Copyright Page
+
+Copyright © 2026 by Adaryus Gillum. All rights reserved.
+
+No part of this publication may be reproduced, distributed, or transmitted in any form or by any means, including photocopying, recording, or other electronic or mechanical methods, without the prior written permission of the publisher, except in the case of brief quotations embodied in critical reviews and certain other noncommercial uses permitted by copyright law.
+
+**Author:** Adaryus Gillum
+
+**Publisher:** The Small Business AI Revolution Series
+
+**First Edition:** 2026
+
+**Disclaimer:** This book is for informational purposes only. The author and publisher disclaim any liability for any loss or damage arising from the use of information contained in this book. While every effort has been made to ensure the accuracy of the information presented, the field of artificial intelligence is rapidly evolving, and readers should verify current information before making business decisions.
 
 ---
 
@@ -2496,24 +2514,46 @@ Welcome to the AI revolution—on your terms.
 
 ---
 
-## About This Series
+# References and Works Cited
 
-"The Small Business AI Revolution Series" provides practical, actionable guidance for small business owners navigating the AI landscape.
+## MLA Format (9th Edition)
 
-**Book 1:** AI-Powered Growth: Transforming Your Small Business with Artificial Intelligence
+Anthropic. *Claude: AI Assistant*. Anthropic, 2024, www.anthropic.com.
 
-**Book 2:** Demystifying AI: What Every Small Business Needs to Know Before Getting Started (This Book)
+Google LLC. *Google Analytics: Web Analytics Platform*. Google, 2024, analytics.google.com.
 
-**Book 3:** The AI Implementation Roadmap: From Strategy to Execution
+IBM Corporation. *IBM Watson: AI and Machine Learning Platform*. IBM, 2024, www.ibm.com/watson.
 
-**Book 4:** AI Tools in Action: Real-World Applications for Small Business
+Microsoft Corporation. *Azure AI: Cloud-Based AI Services*. Microsoft, 2024, azure.microsoft.com/services/ai.
 
-**Book 5:** Building an AI-Powered Team: Hiring, Training, and Leading in the Age of AI
+OpenAI. *ChatGPT: Conversational AI*. OpenAI, 2024, openai.com.
 
-**Book 6:** The Future-Proof Small Business: Staying Ahead of AI Trends
+TensorFlow Developers. *TensorFlow: Machine Learning Framework*. Google, 2024, www.tensorflow.org.
+
+## APA Format (7th Edition)
+
+Anthropic. (2024). *Claude: AI assistant*. https://www.anthropic.com
+
+Google LLC. (2024). *Google Analytics: Web analytics platform*. https://analytics.google.com
+
+IBM Corporation. (2024). *IBM Watson: AI and machine learning platform*. https://www.ibm.com/watson
+
+Microsoft Corporation. (2024). *Azure AI: Cloud-based AI services*. https://azure.microsoft.com/services/ai
+
+OpenAI. (2024). *ChatGPT: Conversational AI*. https://openai.com
+
+TensorFlow Developers. (2024). *TensorFlow: Machine learning framework*. https://www.tensorflow.org
 
 ---
 
-*© 2026 The Small Business AI Revolution Series. All rights reserved.*
+## About the Author
 
-*This book is for informational purposes only. The author and publisher disclaim any liability for any loss or damage arising from the use of information contained in this book.*
+**Adaryus Gillum** is a leading voice in the democratization of artificial intelligence for small businesses. With extensive experience in technology implementation and business transformation, Gillum has dedicated his career to helping small business owners understand and leverage AI technologies to compete more effectively in the modern marketplace. Through *The Small Business AI Revolution Series*, he provides practical, accessible guidance that bridges the gap between cutting-edge technology and everyday business applications.
+
+---
+
+*End of Book 2: Demystifying AI*
+
+**By Adaryus Gillum**
+
+*Next: Book 3 - The AI Mindset Shift: Preparing Your Small Business for the Intelligence Age*

@@ -1,6 +1,24 @@
 # The Crystal Ball CFO: AI for Financial Forecasting and Risk Management
 
-## Book 19 of The Small Business AI Revolution Series
+**Book 19 of The Small Business AI Revolution Series**
+
+**By Adaryus Gillum**
+
+---
+
+## Copyright Page
+
+Copyright © 2026 by Adaryus Gillum. All rights reserved.
+
+No part of this publication may be reproduced, distributed, or transmitted in any form or by any means, including photocopying, recording, or other electronic or mechanical methods, without the prior written permission of the publisher, except in the case of brief quotations embodied in critical reviews and certain other noncommercial uses permitted by copyright law.
+
+**Author:** Adaryus Gillum
+
+**Publisher:** The Small Business AI Revolution Series
+
+**First Edition:** 2026
+
+**Disclaimer:** This book is for informational purposes only. The author and publisher disclaim any liability for any loss or damage arising from the use of information contained in this book. While every effort has been made to ensure the accuracy of the information presented, the field of artificial intelligence is rapidly evolving, and readers should verify current information before making business decisions.
 
 ---
 
@@ -1452,6 +1470,46 @@ The future of small business finance is bright for those who embrace this transf
 
 ---
 
-**Word Count: Approximately 24,000 words**
+# References and Works Cited
 
-*Book 19 of The Small Business AI Revolution Series*
+## MLA Format (9th Edition)
+
+Anthropic. *Claude: AI Assistant*. Anthropic, 2024, www.anthropic.com.
+
+Intuit Inc. *QuickBooks: Accounting Software*. Intuit, 2024, quickbooks.intuit.com.
+
+Microsoft Corporation. *Excel with AI Features*. Microsoft, 2024, www.microsoft.com/microsoft-365/excel.
+
+OpenAI. *ChatGPT: Conversational AI*. OpenAI, 2024, openai.com.
+
+Xero Limited. *Xero: Cloud Accounting Software*. Xero, 2024, www.xero.com.
+
+Zoho Corporation. *Zoho Books: Accounting Software*. Zoho, 2024, www.zoho.com/books.
+
+## APA Format (7th Edition)
+
+Anthropic. (2024). *Claude: AI assistant*. https://www.anthropic.com
+
+Intuit Inc. (2024). *QuickBooks: Accounting software*. https://quickbooks.intuit.com
+
+Microsoft Corporation. (2024). *Excel with AI features*. https://www.microsoft.com/microsoft-365/excel
+
+OpenAI. (2024). *ChatGPT: Conversational AI*. https://openai.com
+
+Xero Limited. (2024). *Xero: Cloud accounting software*. https://www.xero.com
+
+Zoho Corporation. (2024). *Zoho Books: Accounting software*. https://www.zoho.com/books
+
+---
+
+## About the Author
+
+**Adaryus Gillum** is a leading voice in the democratization of artificial intelligence for small businesses. With extensive experience in technology implementation and business transformation, Gillum has dedicated his career to helping small business owners understand and leverage AI technologies to compete more effectively in the modern marketplace. Through *The Small Business AI Revolution Series*, he provides practical, accessible guidance that bridges the gap between cutting-edge technology and everyday business applications.
+
+---
+
+*End of Book 19: The Crystal Ball CFO*
+
+**By Adaryus Gillum**
+
+*Thank you for reading The Small Business AI Revolution Series. May your business thrive in the age of artificial intelligence.*

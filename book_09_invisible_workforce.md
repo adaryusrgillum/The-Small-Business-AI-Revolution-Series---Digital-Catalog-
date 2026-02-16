@@ -1,6 +1,24 @@
 # The Invisible Workforce: How AI Agents Can Become Your Most Reliable Employees
 
-## Book 9 of The Small Business AI Revolution Series
+**Book 9 of The Small Business AI Revolution Series**
+
+**By Adaryus Gillum**
+
+---
+
+## Copyright Page
+
+Copyright © 2026 by Adaryus Gillum. All rights reserved.
+
+No part of this publication may be reproduced, distributed, or transmitted in any form or by any means, including photocopying, recording, or other electronic or mechanical methods, without the prior written permission of the publisher, except in the case of brief quotations embodied in critical reviews and certain other noncommercial uses permitted by copyright law.
+
+**Author:** Adaryus Gillum
+
+**Publisher:** The Small Business AI Revolution Series
+
+**First Edition:** 2026
+
+**Disclaimer:** This book is for informational purposes only. The author and publisher disclaim any liability for any loss or damage arising from the use of information contained in this book. While every effort has been made to ensure the accuracy of the information presented, the field of artificial intelligence is rapidly evolving, and readers should verify current information before making business decisions.
 
 ---
 
@@ -3053,12 +3071,46 @@ The future of work is here. Welcome to the age of the invisible workforce.
 
 ---
 
-*The Small Business AI Revolution Series*
+# References and Works Cited
 
-Book 9: The Invisible Workforce: How AI Agents Can Become Your Most Reliable Employees
+## MLA Format (9th Edition)
 
-© 2025 - All rights reserved
+Anthropic. *Claude: AI Assistant*. Anthropic, 2024, www.anthropic.com.
+
+Google LLC. *DialogFlow: Conversational AI Platform*. Google, 2024, cloud.google.com/dialogflow.
+
+IBM Corporation. *IBM Watson Assistant*. IBM, 2024, www.ibm.com/cloud/watson-assistant.
+
+Microsoft Corporation. *Azure Bot Service*. Microsoft, 2024, azure.microsoft.com/services/bot-services.
+
+OpenAI. *GPT-4: Large Language Model*. OpenAI, 2024, openai.com.
+
+Rasa Technologies. *Rasa: Open Source Conversational AI*. Rasa, 2024, rasa.com.
+
+## APA Format (7th Edition)
+
+Anthropic. (2024). *Claude: AI assistant*. https://www.anthropic.com
+
+Google LLC. (2024). *DialogFlow: Conversational AI platform*. https://cloud.google.com/dialogflow
+
+IBM Corporation. (2024). *IBM Watson Assistant*. https://www.ibm.com/cloud/watson-assistant
+
+Microsoft Corporation. (2024). *Azure Bot Service*. https://azure.microsoft.com/services/bot-services
+
+OpenAI. (2024). *GPT-4: Large language model*. https://openai.com
+
+Rasa Technologies. (2024). *Rasa: Open source conversational AI*. https://rasa.com
 
 ---
 
-*Thank you for reading. May your agents be capable, your integrations smooth, and your human-agent collaborations fruitful.*
+## About the Author
+
+**Adaryus Gillum** is a leading voice in the democratization of artificial intelligence for small businesses. With extensive experience in technology implementation and business transformation, Gillum has dedicated his career to helping small business owners understand and leverage AI technologies to compete more effectively in the modern marketplace. Through *The Small Business AI Revolution Series*, he provides practical, accessible guidance that bridges the gap between cutting-edge technology and everyday business applications.
+
+---
+
+*End of Book 9: The Invisible Workforce*
+
+**By Adaryus Gillum**
+
+*Next: Book 10 - Smart Operations: AI-Powered Efficiency for Manufacturing, Retail, and Service Businesses*

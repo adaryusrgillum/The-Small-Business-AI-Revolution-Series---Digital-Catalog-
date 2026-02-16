@@ -1,6 +1,24 @@
 # Smart Operations: AI-Powered Efficiency for Manufacturing, Retail, and Service Businesses
 
-## Book 10 of The Small Business AI Revolution Series
+**Book 10 of The Small Business AI Revolution Series**
+
+**By Adaryus Gillum**
+
+---
+
+## Copyright Page
+
+Copyright © 2026 by Adaryus Gillum. All rights reserved.
+
+No part of this publication may be reproduced, distributed, or transmitted in any form or by any means, including photocopying, recording, or other electronic or mechanical methods, without the prior written permission of the publisher, except in the case of brief quotations embodied in critical reviews and certain other noncommercial uses permitted by copyright law.
+
+**Author:** Adaryus Gillum
+
+**Publisher:** The Small Business AI Revolution Series
+
+**First Edition:** 2026
+
+**Disclaimer:** This book is for informational purposes only. The author and publisher disclaim any liability for any loss or damage arising from the use of information contained in this book. While every effort has been made to ensure the accuracy of the information presented, the field of artificial intelligence is rapidly evolving, and readers should verify current information before making business decisions.
 
 ---
 
@@ -4390,14 +4408,46 @@ Welcome to the future of smart operations.
 
 ---
 
-## About This Book
+# References and Works Cited
 
-This book is part of "The Small Business AI Revolution Series," designed to help small business owners understand and implement AI technologies to transform their operations, compete more effectively, and build sustainable competitive advantages.
+## MLA Format (9th Edition)
 
-Each book in the series focuses on a specific aspect of AI application for small businesses, providing practical guidance, real-world examples, and actionable implementation roadmaps.
+Anthropic. *Claude: AI Assistant*. Anthropic, 2024, www.anthropic.com.
+
+Google LLC. *Google Cloud AI for Retail*. Google, 2024, cloud.google.com/solutions/retail.
+
+IBM Corporation. *IBM Maximo: AI-Powered Asset Management*. IBM, 2024, www.ibm.com/products/maximo.
+
+Microsoft Corporation. *Dynamics 365 AI*. Microsoft, 2024, dynamics.microsoft.com.
+
+OpenAI. *ChatGPT: Conversational AI*. OpenAI, 2024, openai.com.
+
+SAP SE. *SAP Business AI*. SAP, 2024, www.sap.com/products/artificial-intelligence.
+
+## APA Format (7th Edition)
+
+Anthropic. (2024). *Claude: AI assistant*. https://www.anthropic.com
+
+Google LLC. (2024). *Google Cloud AI for Retail*. https://cloud.google.com/solutions/retail
+
+IBM Corporation. (2024). *IBM Maximo: AI-powered asset management*. https://www.ibm.com/products/maximo
+
+Microsoft Corporation. (2024). *Dynamics 365 AI*. https://dynamics.microsoft.com
+
+OpenAI. (2024). *ChatGPT: Conversational AI*. https://openai.com
+
+SAP SE. (2024). *SAP Business AI*. https://www.sap.com/products/artificial-intelligence
 
 ---
 
-*Copyright 2026 - The Small Business AI Revolution Series*
+## About the Author
 
-*All rights reserved. No part of this publication may be reproduced, distributed, or transmitted in any form or by any means without the prior written permission of the publisher.*
+**Adaryus Gillum** is a leading voice in the democratization of artificial intelligence for small businesses. With extensive experience in technology implementation and business transformation, Gillum has dedicated his career to helping small business owners understand and leverage AI technologies to compete more effectively in the modern marketplace. Through *The Small Business AI Revolution Series*, he provides practical, accessible guidance that bridges the gap between cutting-edge technology and everyday business applications.
+
+---
+
+*End of Book 10: Smart Operations*
+
+**By Adaryus Gillum**
+
+*Next: Book 11 - The Self-Running Business: AI Systems for Inventory, Scheduling, and Customer Management*

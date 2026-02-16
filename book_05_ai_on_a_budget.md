@@ -1,6 +1,24 @@
 # AI on a Budget: Smart Implementation Strategies for Cash-Conscious Companies
 
-## Book 5 of The Small Business AI Revolution Series
+**Book 5 of The Small Business AI Revolution Series**
+
+**By Adaryus Gillum**
+
+---
+
+## Copyright Page
+
+Copyright © 2026 by Adaryus Gillum. All rights reserved.
+
+No part of this publication may be reproduced, distributed, or transmitted in any form or by any means, including photocopying, recording, or other electronic or mechanical methods, without the prior written permission of the publisher, except in the case of brief quotations embodied in critical reviews and certain other noncommercial uses permitted by copyright law.
+
+**Author:** Adaryus Gillum
+
+**Publisher:** The Small Business AI Revolution Series
+
+**First Edition:** 2026
+
+**Disclaimer:** This book is for informational purposes only. The author and publisher disclaim any liability for any loss or damage arising from the use of information contained in this book. While every effort has been made to ensure the accuracy of the information presented, the field of artificial intelligence is rapidly evolving, and readers should verify current information before making business decisions.
 
 ---
 
@@ -2984,27 +3002,48 @@ Go build something amazing.
 
 ---
 
-## About This Series
+---
 
-This book is part of "The Small Business AI Revolution Series," designed to help small business owners harness the power of artificial intelligence. Other books in the series include:
+# References and Works Cited
 
-- Book 1: [Title]
-- Book 2: [Title]
-- Book 3: [Title]
-- Book 4: [Title]
-- Book 6: [Title]
+## MLA Format (9th Edition)
 
-For updates, resources, and additional content, visit [website].
+Airtable Inc. *Airtable: Cloud Collaboration Service*. Airtable, 2024, www.airtable.com.
+
+Anthropic. *Claude: AI Assistant*. Anthropic, 2024, www.anthropic.com.
+
+Buffer Inc. *Buffer: Social Media Management*. Buffer, 2024, buffer.com.
+
+Google LLC. *Google Workspace AI Features*. Google, 2024, workspace.google.com.
+
+OpenAI. *ChatGPT: Conversational AI*. OpenAI, 2024, openai.com.
+
+Zapier Inc. *Zapier: Workflow Automation*. Zapier, 2024, zapier.com.
+
+## APA Format (7th Edition)
+
+Airtable Inc. (2024). *Airtable: Cloud collaboration service*. https://www.airtable.com
+
+Anthropic. (2024). *Claude: AI assistant*. https://www.anthropic.com
+
+Buffer Inc. (2024). *Buffer: Social media management*. https://buffer.com
+
+Google LLC. (2024). *Google Workspace AI features*. https://workspace.google.com
+
+OpenAI. (2024). *ChatGPT: Conversational AI*. https://openai.com
+
+Zapier Inc. (2024). *Zapier: Workflow automation*. https://zapier.com
 
 ---
 
-*Copyright © 2026*
-*All rights reserved.*
+## About the Author
 
-*No part of this publication may be reproduced, distributed, or transmitted in any form or by any means without the prior written permission of the publisher.*
+**Adaryus Gillum** is a leading voice in the democratization of artificial intelligence for small businesses. With extensive experience in technology implementation and business transformation, Gillum has dedicated his career to helping small business owners understand and leverage AI technologies to compete more effectively in the modern marketplace. Through *The Small Business AI Revolution Series*, he provides practical, accessible guidance that bridges the gap between cutting-edge technology and everyday business applications.
 
 ---
 
-**Word Count:** Approximately 22,000 words
+*End of Book 5: AI on a Budget*
 
-**Reading Time:** 110-130 minutes
+**By Adaryus Gillum**
+
+*Next: Book 6 - Finding Your AI Advantage: Identifying High-Impact Opportunities in Your Business*
