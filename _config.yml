@@ -1,0 +1,48 @@
+theme: jekyll-theme-cayman
+title: "The Small Business AI Revolution Series"
+description: "Practical AI implementation guides for small business owners"
+show_downloads: true
+google_analytics: # Add your Google Analytics ID here
+
+# Additional settings for better GitHub Pages experience
+plugins:
+  - jekyll-relative-links
+relative_links:
+  enabled: true
+  collections: true
+
+# SEO and metadata
+author: Adaryus Gillum
+twitter:
+  username: # Add Twitter handle
+  card: summary_large_image
+
+# Navigation (optional)
+navigation:
+  - title: Home
+    url: /
+  - title: Foundation Series
+    url: /#foundation-books-1-3
+  - title: Digital Catalog
+    url: /digital_catalog.html
+  - title: About
+    url: /#about-this-series
+
+# Collections for better organization
+collections:
+  books:
+    output: true
+    permalink: /:collection/:name
+
+# Markdown settings
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+# Exclude files from processing
+exclude:
+  - .git
+  - .gitignore
+  - README.md
+  - LICENSE
