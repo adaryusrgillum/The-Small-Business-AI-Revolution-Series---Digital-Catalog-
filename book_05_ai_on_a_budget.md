@@ -1,3 +1,14 @@
+---
+title: "AI on a Budget"
+subtitle: "Smart Implementation Strategies for Cash-Conscious Companies"
+series: "The Small Business AI Revolution"
+volume: 5
+author: "Adaryus Gillum"
+category: "Strategy & Planning"
+tags: [Budget, Cost-Effective, Bootstrapping, Free Tools, ROI]
+icon: "💰"
+---
+
 # AI on a Budget: Smart Implementation Strategies for Cash-Conscious Companies
 
 ## Book 5 of The Small Business AI Revolution Series

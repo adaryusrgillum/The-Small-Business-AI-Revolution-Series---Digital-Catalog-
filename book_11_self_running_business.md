@@ -1,3 +1,14 @@
+---
+title: "The Self-Running Business"
+subtitle: "AI Systems for Inventory, Scheduling, and Customer Management"
+series: "The Small Business AI Revolution"
+volume: 11
+author: "Adaryus Gillum"
+category: "Operations"
+tags: [Business Automation, Autonomous Systems, Inventory Management, Scheduling, CRM]
+icon: "🏢"
+---
+
 # Book 11: The Self-Running Business: AI Systems for Inventory, Scheduling, and Customer Management
 
 ## The Small Business AI Revolution Series

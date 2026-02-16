@@ -1,3 +1,14 @@
+---
+title: "Smart Operations"
+subtitle: "AI-Powered Efficiency for Manufacturing, Retail, and Service Businesses"
+series: "The Small Business AI Revolution"
+volume: 10
+author: "Adaryus Gillum"
+category: "Operations"
+tags: [Operations, Supply Chain, Inventory, Quality Control, Resource Management]
+icon: "⚙️"
+---
+
 # Smart Operations: AI-Powered Efficiency for Manufacturing, Retail, and Service Businesses
 
 ## Book 10 of The Small Business AI Revolution Series

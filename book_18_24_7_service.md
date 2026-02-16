@@ -1,3 +1,14 @@
+---
+title: "24/7 Service, Zero Headcount"
+subtitle: "Building AI-Powered Customer Support Systems"
+series: "The Small Business AI Revolution"
+volume: 18
+author: "Adaryus Gillum"
+category: "Customer Experience"
+tags: [24/7 Support, Automation, Chatbots, Self-Service, Support Systems]
+icon: "🌐"
+---
+
 # 24/7 Service, Zero Headcount: Building AI-Powered Customer Support Systems
 
 ## Book 18 of The Small Business AI Revolution Series

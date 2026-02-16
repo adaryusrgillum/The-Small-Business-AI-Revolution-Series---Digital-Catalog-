@@ -1,3 +1,14 @@
+---
+title: "The AI Mindset Shift"
+subtitle: "Preparing Your Small Business for the Intelligence Age"
+series: "The Small Business AI Revolution"
+volume: 3
+author: "Adaryus Gillum"
+category: "Foundation"
+tags: [Change Management, Business Culture, Leadership, Human-AI Collaboration, Ethics]
+icon: "🧠"
+---
+
 # The AI Mindset Shift: Preparing Your Small Business for the Intelligence Age
 
 ## Book 3 of The Small Business AI Revolution Series
