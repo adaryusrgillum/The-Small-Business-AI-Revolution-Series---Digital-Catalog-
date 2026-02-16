@@ -1,0 +1,1708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Small Business AI Revolution Series - Digital Catalog</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --book-width: 420px;
+            --book-height: 560px;
+            --page-width: 400px;
+            --page-height: 540px;
+            --primary: #1a1a2e;
+            --accent: #e94560;
+            --gold: #d4af37;
+            --cream: #f5f0e8;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .catalog-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 60px;
+            color: white;
+        }
+
+        .header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+            background: linear-gradient(135deg, #fff 0%, #d4af37 50%, #fff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .series-badge {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* Navigation */
+        .nav-menu {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 40px;
+            padding: 20px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-btn {
+            padding: 10px 20px;
+            background: transparent;
+            border: 1px solid rgba(212,175,55,0.3);
+            color: var(--gold);
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .nav-btn:hover, .nav-btn.active {
+            background: var(--gold);
+            color: var(--primary);
+        }
+
+        /* Book Grid */
+        .books-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 60px;
+            perspective: 2000px;
+        }
+
+        /* Book Container */
+        .book-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .book-container {
+            width: var(--book-width);
+            height: var(--book-height);
+            position: relative;
+            perspective: 1500px;
+            cursor: pointer;
+            margin-bottom: 25px;
+        }
+
+        .book {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.6s ease;
+        }
+
+        .book:hover {
+            transform: rotateY(-15deg) rotateX(5deg);
+        }
+
+        .book.open {
+            transform: rotateY(-180deg);
+        }
+
+        /* Book Cover */
+        .book-cover {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(145deg, #2d2d44 0%, #1a1a2e 100%);
+            border-radius: 5px 15px 15px 5px;
+            backface-visibility: hidden;
+            transform-origin: left;
+            box-shadow: 
+                0 20px 60px rgba(0,0,0,0.5),
+                inset 0 0 60px rgba(0,0,0,0.3),
+                inset 5px 0 20px rgba(255,255,255,0.1);
+            display: flex;
+            flex-direction: column;
+            padding: 40px 30px;
+            border-left: 8px solid rgba(0,0,0,0.3);
+        }
+
+        .book-cover::before {
+            content: '';
+            position: absolute;
+            left: 15px;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(180deg, transparent 0%, rgba(212,175,55,0.3) 50%, transparent 100%);
+        }
+
+        .book-spine {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 40px;
+            height: 100%;
+            background: linear-gradient(90deg, #1a1a2e 0%, #2d2d44 50%, #1a1a2e 100%);
+            transform: rotateY(-90deg) translateZ(20px);
+            transform-origin: left;
+            border-radius: 5px 0 0 5px;
+        }
+
+        .cover-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: 0.05;
+            background-image: 
+                radial-gradient(circle at 20% 80%, var(--gold) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, var(--accent) 0%, transparent 50%);
+        }
+
+        .book-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 1rem;
+            color: var(--gold);
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .book-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: white;
+            line-height: 1.3;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .book-subtitle {
+            font-size: 0.95rem;
+            color: rgba(255,255,255,0.7);
+            line-height: 1.5;
+            margin-bottom: auto;
+        }
+
+        .cover-decoration {
+            width: 60px;
+            height: 3px;
+            background: var(--gold);
+            margin: 20px 0;
+        }
+
+        .cover-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .series-name {
+            font-size: 0.75rem;
+            color: var(--gold);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-top: auto;
+        }
+
+        /* Book Pages */
+        .book-pages {
+            position: absolute;
+            width: calc(100% - 10px);
+            height: calc(100% - 20px);
+            top: 10px;
+            right: 5px;
+            background: linear-gradient(90deg, #e8e4dc 0%, #f5f0e8 5%, #f5f0e8 95%, #e8e4dc 100%);
+            border-radius: 3px 12px 12px 3px;
+            transform: translateZ(-15px);
+            box-shadow: inset 0 0 30px rgba(0,0,0,0.1);
+        }
+
+        .book-pages::before {
+            content: '';
+            position: absolute;
+            left: 5px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: repeating-linear-gradient(
+                0deg,
+                transparent,
+                transparent 2px,
+                rgba(0,0,0,0.1) 2px,
+                rgba(0,0,0,0.1) 4px
+            );
+        }
+
+        /* Inside Pages */
+        .book-inside {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: var(--cream);
+            border-radius: 5px 15px 15px 5px;
+            backface-visibility: hidden;
+            transform: rotateY(180deg);
+            padding: 35px;
+            overflow: hidden;
+            box-shadow: inset 0 0 40px rgba(0,0,0,0.05);
+        }
+
+        .inside-content {
+            height: 100%;
+            overflow-y: auto;
+            padding-right: 10px;
+        }
+
+        .inside-content::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        .inside-content::-webkit-scrollbar-thumb {
+            background: var(--gold);
+            border-radius: 2px;
+        }
+
+        .inside-header {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--gold);
+        }
+
+        .chapter-list {
+            list-style: none;
+        }
+
+        .chapter-item {
+            padding: 8px 0;
+            border-bottom: 1px dashed rgba(0,0,0,0.1);
+            font-size: 0.9rem;
+            color: #444;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .chapter-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 22px;
+            height: 22px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            font-size: 0.7rem;
+            font-weight: 600;
+            margin-right: 10px;
+            flex-shrink: 0;
+        }
+
+        .preview-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 30px;
+            background: var(--accent);
+            color: white;
+            border: none;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .preview-btn:hover {
+            background: #ff6b6b;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(233,69,96,0.4);
+        }
+
+        /* Book Info */
+        .book-info {
+            text-align: center;
+            color: white;
+        }
+
+        .book-info h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            margin-bottom: 8px;
+        }
+
+        .book-meta {
+            font-size: 0.9rem;
+            opacity: 0.7;
+            margin-bottom: 15px;
+        }
+
+        .category-tag {
+            display: inline-block;
+            padding: 5px 15px;
+            background: rgba(212,175,55,0.2);
+            color: var(--gold);
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        /* Flip Animation Classes */
+        .flipping .book-cover {
+            animation: flipOpen 0.8s ease forwards;
+        }
+
+        @keyframes flipOpen {
+            0% { transform: rotateY(0deg); }
+            100% { transform: rotateY(-160deg); }
+        }
+
+        /* Modal for Preview */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.9);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background: var(--cream);
+            width: 90%;
+            max-width: 900px;
+            max-height: 90vh;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 30px 80px rgba(0,0,0,0.5);
+        }
+
+        .modal-header {
+            background: var(--primary);
+            color: white;
+            padding: 25px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .modal-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+        }
+
+        .close-modal {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+
+        .close-modal:hover {
+            opacity: 1;
+        }
+
+        .modal-body {
+            padding: 30px;
+            max-height: calc(90vh - 100px);
+            overflow-y: auto;
+        }
+
+        .preview-text {
+            font-family: 'Georgia', serif;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #333;
+            column-count: 2;
+            column-gap: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .books-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            :root {
+                --book-width: 300px;
+                --book-height: 400px;
+            }
+            
+            .preview-text {
+                column-count: 1;
+            }
+
+            .nav-menu {
+                padding: 10px;
+            }
+
+            .nav-btn {
+                padding: 8px 15px;
+                font-size: 0.75rem;
+            }
+        }
+
+        /* Page Turn Effect Overlay */
+        .page-corner {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, transparent 50%, rgba(255,255,255,0.3) 50%);
+            border-radius: 0 0 15px 0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .page-corner:hover {
+            width: 60px;
+            height: 60px;
+        }
+
+        /* Loading Animation */
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255,255,255,.3);
+            border-radius: 50%;
+            border-top-color: white;
+            animation: spin 1s ease-in-out infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Category Headers */
+        .category-section {
+            margin: 60px 0 40px;
+            text-align: center;
+            scroll-margin-top: 100px;
+        }
+
+        .category-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .category-divider {
+            width: 100px;
+            height: 3px;
+            background: var(--gold);
+            margin: 0 auto;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        /* Stats Section */
+        .stats-section {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            text-align: center;
+            color: white;
+        }
+
+        .stat-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            color: var(--gold);
+            font-weight: 700;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body>
+    <div class="catalog-container">
+        <header class="header">
+            <div class="series-badge">Complete 40 Books Collection</div>
+            <h1>The Small Business AI Revolution Series</h1>
+            <p>Your comprehensive guide to transforming your small business with artificial intelligence. Click any book to preview its contents.</p>
+            
+            <div class="stats-section">
+                <div class="stat-item">
+                    <div class="stat-number">40</div>
+                    <div class="stat-label">Books</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">10</div>
+                    <div class="stat-label">Categories</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">350+</div>
+                    <div class="stat-label">Chapters</div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="nav-menu">
+            <button class="nav-btn active" onclick="showCategory('all')">All Books</button>
+            <button class="nav-btn" onclick="showCategory('foundation')">Foundation</button>
+            <button class="nav-btn" onclick="showCategory('strategy')">Strategy</button>
+            <button class="nav-btn" onclick="showCategory('operations')">Operations</button>
+            <button class="nav-btn" onclick="showCategory('marketing')">Marketing</button>
+            <button class="nav-btn" onclick="showCategory('customer')">Customer</button>
+            <button class="nav-btn" onclick="showCategory('finance')">Finance</button>
+            <button class="nav-btn" onclick="showCategory('industry')">Industry</button>
+            <button class="nav-btn" onclick="showCategory('advanced')">Advanced</button>
+            <button class="nav-btn" onclick="showCategory('ethics')">Ethics</button>
+            <button class="nav-btn" onclick="showCategory('cases')">Case Studies</button>
+            <button class="nav-btn" onclick="showCategory('quickstart')">Quick Start</button>
+        </nav>
+
+        <!-- Foundation Level -->
+        <div class="category-section" id="section-foundation">
+            <h2 class="category-title">Foundation Level</h2>
+            <div class="category-divider"></div>
+        </div>
+        <div class="books-grid" id="foundation-books"></div>
+
+        <!-- Strategy & Planning -->
+        <div class="category-section" id="section-strategy">
+            <h2 class="category-title">Strategy & Planning</h2>
+            <div class="category-divider"></div>
+        </div>
+        <div class="books-grid" id="strategy-books"></div>
+
+        <!-- Operations & Automation -->
+        <div class="category-section" id="section-operations">
+            <h2 class="category-title">Operations & Automation</h2>
+            <div class="category-divider"></div>
+        </div>
+        <div class="books-grid" id="operations-books"></div>
+
+        <!-- Marketing & Sales -->
+        <div class="category-section" id="section-marketing">
+            <h2 class="category-title">Marketing & Sales</h2>
+            <div class="category-divider"></div>
+        </div>
+        <div class="books-grid" id="marketing-books"></div>
+
+        <!-- Customer Experience -->
+        <div class="category-section" id="section-customer">
+            <h2 class="category-title">Customer Experience</h2>
+            <div class="category-divider"></div>
+        </div>
+        <div class="books-grid" id="customer-books"></div>
+
+        <!-- Finance & Decision Making -->
+        <div class="category-section" id="section-finance">
+            <h2 class="category-title">Finance & Decision Making</h2>
+            <div class="category-divider"></div>
+        </div>
+        <div class="books-grid" id="finance-books"></div>
+
+        <!-- Industry-Specific -->
+        <div class="category-section" id="section-industry">
+            <h2 class="category-title">Industry-Specific Guides</h2>
+            <div class="category-divider"></div>
+        </div>
+        <div class="books-grid" id="industry-books"></div>
+
+        <!-- Advanced Implementation -->
+        <div class="category-section" id="section-advanced">
+            <h2 class="category-title">Advanced Implementation</h2>
+            <div class="category-divider"></div>
+        </div>
+        <div class="books-grid" id="advanced-books"></div>
+
+        <!-- Ethics, Security & Future-Proofing -->
+        <div class="category-section" id="section-ethics">
+            <h2 class="category-title">Ethics, Security & Future-Proofing</h2>
+            <div class="category-divider"></div>
+        </div>
+        <div class="books-grid" id="ethics-books"></div>
+
+        <!-- Case Studies & Inspiration -->
+        <div class="category-section" id="section-cases">
+            <h2 class="category-title">Case Studies & Inspiration</h2>
+            <div class="category-divider"></div>
+        </div>
+        <div class="books-grid" id="cases-books"></div>
+
+        <!-- Quick-Start Companion Series -->
+        <div class="category-section" id="section-quickstart">
+            <h2 class="category-title">Quick-Start Companion Series</h2>
+            <div class="category-divider"></div>
+        </div>
+        <div class="books-grid" id="quickstart-books"></div>
+    </div>
+
+    <!-- Preview Modal -->
+    <div class="modal" id="previewModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">Book Preview</h2>
+                <button class="close-modal" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="preview-text" id="modalContent"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    <script>
+        // Complete Book Data - All 40 Books
+        const books = {
+            foundation: [
+                {
+                    id: 1,
+                    title: "AI for the Rest of Us",
+                    subtitle: "A Small Business Owner's First Steps into Artificial Intelligence",
+                    icon: "🚀",
+                    category: "Foundation",
+                    chapters: [
+                        "The AI Revolution Isn't Coming—It's Here",
+                        "AI Explained Without the Jargon",
+                        "Debunking the Myths",
+                        "The Five Ways AI Helps Small Businesses",
+                        "The Competitive Advantage Window",
+                        "Assessing Your Readiness",
+                        "Your First 30 Days with AI",
+                        "Building Your AI Literacy"
+                    ],
+                    preview: "The AI revolution is no longer a distant future—it's happening right now in small businesses across the world. From the corner coffee shop using AI to predict inventory needs, to the family-owned marketing agency automating client reports, artificial intelligence has become the great equalizer. This book is your roadmap to joining this revolution without needing a PhD in computer science or a Silicon Valley budget."
+                },
+                {
+                    id: 2,
+                    title: "Demystifying AI",
+                    subtitle: "What Every Small Business Needs to Know Before Getting Started",
+                    icon: "🔍",
+                    category: "Foundation",
+                    chapters: [
+                        "How AI Actually Works (The Non-Technical Version)",
+                        "Types of AI and What They Do",
+                        "The AI Ecosystem for Small Business",
+                        "What AI Can and Cannot Do Today",
+                        "Understanding AI Pricing Models",
+                        "Data: The Fuel for AI",
+                        "Build vs. Buy vs. Partner",
+                        "Avoiding Common Pitfalls",
+                        "Creating Your AI Learning Plan"
+                    ],
+                    preview: "Behind the buzzwords and hype lies a simple truth: AI is just pattern recognition at scale. This book peels back the layers of mystery surrounding artificial intelligence, giving you the practical knowledge to make informed decisions. You'll learn how AI tools actually work, what they cost, and most importantly—what they can realistically do for your business today."
+                },
+                {
+                    id: 3,
+                    title: "The AI Mindset Shift",
+                    subtitle: "Preparing Your Small Business for the Intelligence Age",
+                    icon: "🧠",
+                    category: "Foundation",
+                    chapters: [
+                        "From Doing to Directing",
+                        "Embracing Experimentation",
+                        "Overcoming Resistance—to AI and Within Yourself",
+                        "Building an AI-Friendly Culture",
+                        "Restructuring for Human-AI Collaboration",
+                        "The Change Management Playbook for Small Business",
+                        "Long-Term Vision in a Fast-Changing World",
+                        "Ethical Foundations",
+                        "Becoming an AI-First Business"
+                    ],
+                    preview: "Technology is only half the battle. The real transformation happens in your mind. This book guides you through the psychological and cultural shifts necessary to thrive in the AI era. Learn how to move from being a doer to a director, how to build a team that embraces change, and how to create an organization where humans and AI work together in harmony."
+                }
+            ],
+            strategy: [
+                {
+                    id: 4,
+                    title: "The Small Business AI Roadmap",
+                    subtitle: "From Strategy to Implementation",
+                    icon: "🗺️",
+                    category: "Strategy & Planning",
+                    chapters: [
+                        "Defining Your AI Vision",
+                        "The AI Opportunity Audit",
+                        "Competitive Intelligence",
+                        "The Phased Approach Framework",
+                        "Selecting Your First Projects",
+                        "Resource Planning",
+                        "Creating Your AI Playbook",
+                        "Risk Management",
+                        "Governance and Oversight",
+                        "KPIs for AI Initiatives",
+                        "The Review and Adapt Cycle"
+                    ],
+                    preview: "Every successful AI implementation starts with a plan. This comprehensive roadmap takes you from initial assessment to full-scale deployment. Whether you're just starting out or looking to expand existing AI capabilities, you'll find a clear path forward with milestones, budgets, and success metrics tailored for small businesses."
+                },
+                {
+                    id: 5,
+                    title: "AI on a Budget",
+                    subtitle: "Smart Implementation Strategies for Cash-Conscious Companies",
+                    icon: "💰",
+                    category: "Strategy & Planning",
+                    chapters: [
+                        "What AI Actually Costs (and Doesn't)",
+                        "The Bootstrapper's AI Toolkit",
+                        "Maximizing Free Trials",
+                        "Prioritizing Your AI Investments",
+                        "Negotiating with AI Vendors",
+                        "The DIY Hybrid Approach",
+                        "Leveraging Community and Ecosystems",
+                        "Creative Funding Strategies",
+                        "Measuring ROI on a Shoestring",
+                        "Graduating from Free to Paid"
+                    ],
+                    preview: "Think AI is only for companies with deep pockets? Think again. This book proves that you can start your AI journey for less than the cost of a business lunch. Discover free tools, clever workarounds, and strategic approaches that let you compete with the big players without their massive budgets."
+                },
+                {
+                    id: 6,
+                    title: "Finding Your AI Advantage",
+                    subtitle: "Identifying High-Impact Opportunities in Your Business",
+                    icon: "🎯",
+                    category: "Strategy & Planning",
+                    chapters: [
+                        "The Four Lenses for AI Opportunities",
+                        "Process Mapping for AI",
+                        "The Data Opportunity Assessment",
+                        "Customer-Facing Opportunities",
+                        "Back-Office Opportunities",
+                        "Strategic Opportunities",
+                        "The Impact Scoring System",
+                        "Feasibility Assessment",
+                        "Building Your Opportunity Portfolio"
+                    ],
+                    preview: "Not all AI opportunities are created equal. This book teaches you how to identify the specific areas where AI can give your business the biggest competitive advantage. Through systematic auditing and prioritization frameworks, you'll discover your unique opportunities for AI-driven growth."
+                },
+                {
+                    id: 7,
+                    title: "The 90-Day AI Sprint",
+                    subtitle: "A Practical Implementation Framework for Small Teams",
+                    icon: "⚡",
+                    category: "Strategy & Planning",
+                    chapters: [
+                        "Sprint Planning and Setup",
+                        "Selecting Your Sprint Target",
+                        "Week 1-2: Setup and Learning",
+                        "Week 3-4: Initial Implementation",
+                        "Week 5-6: Workflow Integration",
+                        "Week 7-8: Optimization",
+                        "Week 9-10: Measurement and Validation",
+                        "Week 11-12: Documentation and Handoff",
+                        "Sprint Retrospective",
+                        "Planning Your Next Sprint"
+                    ],
+                    preview: "Transform your business in just 90 days. This book provides a day-by-day implementation framework designed specifically for small teams with limited resources. Follow the proven sprint methodology to go from zero to AI-powered in three months, with clear milestones, templates, and troubleshooting guides."
+                }
+            ],
+            operations: [
+                {
+                    id: 8,
+                    title: "Automate to Liberate",
+                    subtitle: "Using AI to Free Your Small Business from Busywork",
+                    icon: "🤖",
+                    category: "Operations",
+                    chapters: [
+                        "The True Cost of Busywork",
+                        "What Should (and Shouldn't) Be Automated",
+                        "The Automation Audit",
+                        "Document and Content Automation",
+                        "Communication Automation",
+                        "Data Entry and Processing",
+                        "Scheduling and Logistics",
+                        "Building Your Automation Stack",
+                        "The Human Side of Automation",
+                        "Measuring Automation Success"
+                    ],
+                    preview: "What if you could reclaim 10 hours every week? This book shows you how to identify and automate the repetitive tasks that consume your time. From email management to document processing, learn how to build an automation system that lets you focus on what truly matters—growing your business."
+                },
+                {
+                    id: 9,
+                    title: "The Invisible Workforce",
+                    subtitle: "How AI Agents Can Become Your Most Reliable Employees",
+                    icon: "👥",
+                    category: "Operations",
+                    chapters: [
+                        "What Are AI Agents?",
+                        "Types of AI Agents for Business",
+                        "The Economics of AI Labor",
+                        "Hiring Your First AI Agent",
+                        "Managing AI Agent Performance",
+                        "Building an AI-Human Team",
+                        "Multi-Agent Systems",
+                        "Custom Agent Development",
+                        "The Future of AI Agents"
+                    ],
+                    preview: "Imagine having a team that works 24/7, never calls in sick, and learns from every task. That's the power of AI agents. This book introduces you to the invisible workforce—intelligent agents that can handle everything from customer service to data analysis, giving small businesses enterprise-level capabilities."
+                },
+                {
+                    id: 10,
+                    title: "Smart Operations",
+                    subtitle: "AI-Powered Efficiency for Manufacturing, Retail, and Service Businesses",
+                    icon: "⚙️",
+                    category: "Operations",
+                    chapters: [
+                        "The AI-Enabled Operation",
+                        "Data Infrastructure for Operations",
+                        "Predictive Maintenance",
+                        "Quality Control and Inspection",
+                        "Supply Chain Optimization",
+                        "Production Planning",
+                        "Inventory Intelligence",
+                        "Store Operations",
+                        "Omnichannel Coordination",
+                        "Resource Scheduling",
+                        "Service Quality Management",
+                        "Field Service Optimization"
+                    ],
+                    preview: "Operations are the backbone of any business. This book shows you how to infuse AI into every operational process, from supply chain management to quality control. Learn how leading small businesses are using predictive analytics and automation to run leaner, faster, and more profitably."
+                },
+                {
+                    id: 11,
+                    title: "The Self-Running Business",
+                    subtitle: "AI Systems for Inventory, Scheduling, and Customer Management",
+                    icon: "🏢",
+                    category: "Operations",
+                    chapters: [
+                        "What Is a Self-Running Business?",
+                        "The Architecture of Autonomy",
+                        "Self-Managing Inventory",
+                        "Intelligent Scheduling",
+                        "Autonomous Customer Management",
+                        "Financial Automation",
+                        "Connecting the Systems",
+                        "The Brain: Decision Engines",
+                        "Monitoring and Governance",
+                        "The Owner's Role in an Autonomous Business",
+                        "Team Transition"
+                    ],
+                    preview: "What if your business could run itself? This ambitious book explores the frontier of business automation, showing you how to build systems that handle everything from marketing to operations with minimal human intervention. It's the ultimate guide to creating a business that works for you, not the other way around."
+                }
+            ],
+            marketing: [
+                {
+                    id: 12,
+                    title: "AI-Powered Growth",
+                    subtitle: "Marketing and Sales Automation for Small Business",
+                    icon: "📈",
+                    category: "Marketing & Sales",
+                    chapters: [
+                        "Why Marketing Was First to Be Disrupted",
+                        "The AI Marketing Stack for Small Business",
+                        "Setting Up for Marketing AI Success",
+                        "Audience Intelligence",
+                        "Content Strategy and Creation",
+                        "Campaign Management",
+                        "Social Media Intelligence",
+                        "Lead Intelligence",
+                        "Sales Engagement",
+                        "Pipeline Management",
+                        "Aligning Marketing and Sales with AI",
+                        "Measuring What Matters"
+                    ],
+                    preview: "Marketing has been transformed by AI. This book reveals how small businesses can now access the same sophisticated marketing capabilities as Fortune 500 companies. From predictive analytics to personalized campaigns at scale, discover how to grow your business faster with intelligent marketing."
+                },
+                {
+                    id: 13,
+                    title: "The Always-On Salesperson",
+                    subtitle: "AI Chatbots and Conversion Optimization",
+                    icon: "💼",
+                    category: "Marketing & Sales",
+                    chapters: [
+                        "The Rise of Conversational Commerce",
+                        "Types of Sales Chatbots",
+                        "When to Use Chatbots vs. Humans",
+                        "Conversation Design Principles",
+                        "Lead Qualification Bots",
+                        "Product Recommendation Engines",
+                        "Abandoned Cart Recovery",
+                        "AI-Powered A/B Testing",
+                        "Personalization at Scale",
+                        "Predictive Analytics for Sales",
+                        "Voice Assistants and Smart Speakers",
+                        "Measuring Chatbot ROI"
+                    ],
+                    preview: "Your best salesperson never sleeps. This book explores how AI can power every stage of your sales process, from lead generation to closing. Learn how to build an always-on sales system that nurtures prospects, answers questions, and closes deals around the clock."
+                },
+                {
+                    id: 14,
+                    title: "Predictive Profits",
+                    subtitle: "Using AI to Forecast Demand and Optimize Pricing",
+                    icon: "🔮",
+                    category: "Marketing & Sales",
+                    chapters: [
+                        "The Power of Prediction",
+                        "Building Your Predictive Foundation",
+                        "Demand Forecasting Methods",
+                        "Product-Level Forecasting",
+                        "Service Business Forecasting",
+                        "Using Forecasts for Planning",
+                        "Pricing Science Basics",
+                        "AI-Powered Price Optimization",
+                        "Competitive Price Monitoring",
+                        "Implementing Price Changes",
+                        "Revenue Management",
+                        "Measuring Prediction Accuracy"
+                    ],
+                    preview: "What if you could see the future? Predictive AI makes it possible. This book teaches you how to use AI to anticipate customer needs, market trends, and business opportunities before they happen. Stay ahead of the competition by making decisions based on what's coming, not just what's happened."
+                },
+                {
+                    id: 15,
+                    title: "Content at Scale",
+                    subtitle: "How Small Teams Can Produce Big Marketing with AI",
+                    icon: "✍️",
+                    category: "Marketing & Sales",
+                    chapters: [
+                        "Why Content Marketing Is Hard for Small Business",
+                        "How AI Changes the Content Equation",
+                        "Setting Content Strategy with AI",
+                        "Written Content Generation",
+                        "Visual Content Creation",
+                        "Audio and Video Content",
+                        "Content Adaptation and Repurposing",
+                        "AI-Assisted Content Workflows",
+                        "Personalization and Segmentation",
+                        "Content Distribution",
+                        "Maintaining Quality at Scale",
+                        "Ethical Content Creation"
+                    ],
+                    preview: "Content is king, but creating it is time-consuming. This book shows you how to use AI to produce high-quality content at scale without losing your unique voice. From blog posts to videos, learn how to maintain a consistent content presence that drives growth."
+                }
+            ],
+            customer: [
+                {
+                    id: 16,
+                    title: "The AI Concierge",
+                    subtitle: "Delivering Enterprise-Level Customer Service on a Small Business Budget",
+                    icon: "🎩",
+                    category: "Customer Experience",
+                    chapters: [
+                        "Customer Service Expectations Have Changed",
+                        "The Small Business Service Challenge",
+                        "How AI Levels the Playing Field",
+                        "Intelligent Chat Support",
+                        "Email Automation",
+                        "Phone and Voice AI",
+                        "Social Media Support",
+                        "Knowledge Management",
+                        "Customer Intelligence",
+                        "Quality Assurance",
+                        "Designing Your AI Service Strategy",
+                        "Measuring Service Excellence"
+                    ],
+                    preview: "Your customers expect instant, personalized service. This book shows you how to deliver luxury-level customer experience on a small business budget using AI. From intelligent chatbots to proactive support systems, learn how to make every customer feel like your only customer."
+                },
+                {
+                    id: 17,
+                    title: "Knowing Your Customer",
+                    subtitle: "AI-Driven Personalization for Local and Online Businesses",
+                    icon: "💡",
+                    category: "Customer Experience",
+                    chapters: [
+                        "Why Personalization Matters",
+                        "Personalization Without Creepiness",
+                        "Data for Personalization",
+                        "Website Personalization",
+                        "Email Personalization",
+                        "In-Store Personalization",
+                        "Cross-Channel Consistency",
+                        "Starting Simple",
+                        "Advanced Techniques",
+                        "Measuring Personalization Impact"
+                    ],
+                    preview: "Truly knowing your customers is the ultimate competitive advantage. This book explores how AI can help you understand your customers at a deeper level than ever before. From behavioral analysis to sentiment tracking, discover how to build genuine relationships at scale."
+                },
+                {
+                    id: 18,
+                    title: "24/7 Service, Zero Headcount",
+                    subtitle: "Building AI-Powered Customer Support Systems",
+                    icon: "🌐",
+                    category: "Customer Experience",
+                    chapters: [
+                        "The 24/7 Expectation",
+                        "What Can (and Can't) Be Automated",
+                        "The Hybrid Support Model",
+                        "Self-Service Excellence",
+                        "Automated Issue Resolution",
+                        "Intelligent Routing",
+                        "Proactive Support",
+                        "Maintaining Quality Without Humans",
+                        "Scaling Strategies",
+                        "Integration Ecosystem"
+                    ],
+                    preview: "Your customers don't sleep, and neither should your support. This book provides a complete blueprint for building round-the-clock customer service without hiring round-the-clock staff. Learn how to create seamless support experiences that delight customers while keeping costs under control."
+                }
+            ],
+            finance: [
+                {
+                    id: 19,
+                    title: "The Crystal Ball CFO",
+                    subtitle: "AI for Financial Forecasting and Risk Management",
+                    icon: "💎",
+                    category: "Finance",
+                    chapters: [
+                        "The AI-Enabled Finance Function",
+                        "Data Foundation for Financial AI",
+                        "Financial AI Tools Landscape",
+                        "Cash Flow Forecasting",
+                        "Revenue Forecasting",
+                        "Expense Prediction",
+                        "Integrated Financial Modeling",
+                        "Financial Risk Identification",
+                        "Fraud Detection",
+                        "Compliance Automation",
+                        "Investment Decision Support",
+                        "Building Your AI Finance Practice"
+                    ],
+                    preview: "See your financial future with clarity. This book shows small business owners how to use AI for sophisticated financial planning previously available only to large corporations. From cash flow prediction to scenario modeling, make smarter financial decisions with confidence."
+                },
+                {
+                    id: 20,
+                    title: "Data-Driven Decisions",
+                    subtitle: "Business Intelligence for Non-Technical Small Business Owners",
+                    icon: "📊",
+                    category: "Finance",
+                    chapters: [
+                        "Why Every Business Needs Intelligence",
+                        "Business Intelligence Without the BS",
+                        "Your Data Assets Inventory",
+                        "The Self-Service BI Stack",
+                        "Key Metrics Every Business Should Track",
+                        "Automated Reporting",
+                        "Visual Analytics",
+                        "From Data to Insights",
+                        "Predictive Analytics for Decision-Making",
+                        "Building a Data-Driven Culture"
+                    ],
+                    preview: "Stop guessing, start knowing. This book transforms how you make business decisions by harnessing the power of AI analytics. Learn to collect, analyze, and act on data automatically—turning information into your most valuable competitive advantage."
+                },
+                {
+                    id: 21,
+                    title: "Fraud Fighters",
+                    subtitle: "Protecting Your Small Business with AI Security",
+                    icon: "🛡️",
+                    category: "Finance",
+                    chapters: [
+                        "Why Small Businesses Are Targets",
+                        "Types of Fraud and Cyber Threats",
+                        "The AI Security Advantage",
+                        "Transaction Monitoring",
+                        "Identity Verification",
+                        "Account Security",
+                        "Network and Endpoint Security",
+                        "Assessing Your Risk Profile",
+                        "Building Your Security Stack",
+                        "Incident Response",
+                        "Regulatory Compliance",
+                        "Security Culture"
+                    ],
+                    preview: "Small businesses are increasingly targeted by fraudsters. This book shows you how AI can protect your business from financial crime, cyber attacks, and internal threats. Learn about affordable security solutions that give you enterprise-grade protection."
+                }
+            ],
+            industry: [
+                {
+                    id: 22,
+                    title: "AI for Main Street",
+                    subtitle: "A Retailer's Guide to Smart Stores",
+                    icon: "🏪",
+                    category: "Industry-Specific",
+                    chapters: [
+                        "The New Retail Reality",
+                        "AI Applications Across Retail Types",
+                        "Personalized Shopping",
+                        "Smart Store Operations",
+                        "Intelligent Inventory",
+                        "Pricing Intelligence",
+                        "Supply Chain Optimization",
+                        "Loss Prevention"
+                    ],
+                    preview: "Retail is being reinvented by AI. This industry-specific guide shows brick-and-mortar and online retailers how to compete with the giants using intelligent inventory management, dynamic pricing, and personalized customer experiences that drive loyalty and sales."
+                },
+                {
+                    id: 23,
+                    title: "Healing with Intelligence",
+                    subtitle: "AI Implementation for Medical and Wellness Practices",
+                    icon: "⚕️",
+                    category: "Industry-Specific",
+                    chapters: [
+                        "AI in Healthcare: Promise and Reality",
+                        "Practice Types and AI Fit",
+                        "Diagnostic Assistance",
+                        "Treatment Planning",
+                        "Intelligent Scheduling",
+                        "Documentation and Coding",
+                        "Patient Engagement",
+                        "Revenue Cycle Management",
+                        "Marketing and Growth"
+                    ],
+                    preview: "Healthcare practices face unique challenges with AI adoption. This book navigates the regulatory landscape while showing medical and wellness providers how to use AI for better patient outcomes, streamlined operations, and improved practice profitability—all while maintaining compliance and trust."
+                },
+                {
+                    id: 24,
+                    title: "Built Smart",
+                    subtitle: "AI for Construction, Trades, and Field Service Businesses",
+                    icon: "🔧",
+                    category: "Industry-Specific",
+                    chapters: [
+                        "The Digital Transformation of Blue-Collar Business",
+                        "Business Model Variations",
+                        "Estimating and Bidding",
+                        "Scheduling and Resource Management",
+                        "Project Monitoring",
+                        "Mobile Workforce Management",
+                        "Customer Communication",
+                        "Predictive Maintenance",
+                        "Safety and Compliance",
+                        "Business Development"
+                    ],
+                    preview: "Field service and construction businesses have unique operational challenges. This book shows how AI can optimize job scheduling, improve estimating accuracy, enhance safety compliance, and keep crews productive—whether you're a solo tradesperson or managing multiple teams."
+                },
+                {
+                    id: 25,
+                    title: "The Intelligent Restaurant",
+                    subtitle: "From Kitchen to Customer with AI",
+                    icon: "🍽️",
+                    category: "Industry-Specific",
+                    chapters: [
+                        "The Unique Challenges of Restaurant AI",
+                        "Restaurant Types and AI Applications",
+                        "Inventory Management",
+                        "Kitchen Operations",
+                        "Menu Engineering",
+                        "Reservation and Seating Management",
+                        "Order Taking and Service",
+                        "Customer Experience",
+                        "Labor Optimization",
+                        "Marketing and Growth"
+                    ],
+                    preview: "Restaurants operate on razor-thin margins where efficiency is everything. This book shows how AI can optimize inventory to reduce waste, predict demand for better staffing, personalize dining experiences, and turn data into delicious profits—whether you run a food truck or a fine dining establishment."
+                },
+                {
+                    id: 26,
+                    title: "Legal AI",
+                    subtitle: "Practical Automation for Solo and Small Firm Attorneys",
+                    icon: "⚖️",
+                    category: "Industry-Specific",
+                    chapters: [
+                        "AI in Law: Ethics and Opportunities",
+                        "Practice Area Considerations",
+                        "Legal Research",
+                        "Document Drafting",
+                        "Document Review",
+                        "Case Management Intelligence",
+                        "Client Intake and Relations",
+                        "Billing and Finance",
+                        "Marketing and Business Development",
+                        "Risk Management"
+                    ],
+                    preview: "Legal professionals must navigate ethics rules while embracing efficiency. This book shows attorneys how to use AI for research, document review, and practice management while maintaining professional standards. Learn to automate the routine so you can focus on strategy and client relationships."
+                },
+                {
+                    id: 27,
+                    title: "Creative Intelligence",
+                    subtitle: "AI Tools for Design, Media, and Creative Agencies",
+                    icon: "🎨",
+                    category: "Industry-Specific",
+                    chapters: [
+                        "The Creative AI Revolution",
+                        "AI as Creative Partner",
+                        "Visual Design",
+                        "Video and Motion",
+                        "Copy and Content",
+                        "Audio and Music",
+                        "Creative Workflow",
+                        "Project Management",
+                        "Client Services",
+                        "Evolving Your Agency Model",
+                        "Intellectual Property Considerations"
+                    ],
+                    preview: "AI isn't replacing creatives—it's amplifying them. This book shows designers, agencies, and media professionals how to use AI for rapid iteration, concept development, and production at scale. Learn to blend human creativity with machine efficiency to deliver more value to clients."
+                }
+            ],
+            advanced: [
+                {
+                    id: 28,
+                    title: "Building Your AI Stack",
+                    subtitle: "Integrating Multiple Tools for Maximum Impact",
+                    icon: "🏗️",
+                    category: "Advanced Implementation",
+                    chapters: [
+                        "What Is an AI Stack?",
+                        "Assessing Your Current Technology",
+                        "Stack Design Principles",
+                        "The Data Layer",
+                        "The AI/ML Layer",
+                        "The Application Layer",
+                        "The Integration Layer",
+                        "Integration Strategies",
+                        "Data Flow Optimization",
+                        "Security Across the Stack",
+                        "Stack Governance",
+                        "Optimization and Evolution"
+                    ],
+                    preview: "One tool is never enough. This book guides you through building a cohesive AI technology stack where multiple tools work together seamlessly. Learn about data layers, integration platforms, and architecture patterns that let you scale from one tool to a comprehensive AI infrastructure."
+                },
+                {
+                    id: 29,
+                    title: "Training Your Business Brain",
+                    subtitle: "Custom AI Models Without a PhD",
+                    icon: "🎓",
+                    category: "Advanced Implementation",
+                    chapters: [
+                        "When to Go Custom",
+                        "Types of Custom Models",
+                        "The No-Code/Low-Code Revolution",
+                        "Training Data Strategy",
+                        "Data Preprocessing",
+                        "Data Privacy and Security",
+                        "Platform Selection",
+                        "The Training Process",
+                        "Evaluation and Testing",
+                        "Model Deployment",
+                        "Continuous Improvement"
+                    ],
+                    preview: "Why settle for generic AI when you can have models trained on your specific data? This book demystifies custom model training, showing you how to use no-code and low-code platforms to build AI that understands your business, your customers, and your unique challenges."
+                },
+                {
+                    id: 30,
+                    title: "The Human-AI Partnership",
+                    subtitle: "Redefining Roles and Workflows in Your Team",
+                    icon: "🤝",
+                    category: "Advanced Implementation",
+                    chapters: [
+                        "Beyond Replacement: The Augmentation Mindset",
+                        "Designing Human-AI Workflows",
+                        "The Psychology of Working with AI",
+                        "The Evolving Manager",
+                        "Frontline Worker Augmentation",
+                        "New Roles Emerging",
+                        "Workflow Redesign Methodology",
+                        "Training for Partnership",
+                        "Change Management",
+                        "Measuring Partnership Success",
+                        "Continuous Evolution"
+                    ],
+                    preview: "The future isn't AI vs. humans—it's AI with humans. This book provides a framework for redesigning workflows where people and AI collaborate, each doing what they do best. Learn how to evolve roles, train teams, and build a culture where human-AI partnership thrives."
+                }
+            ],
+            ethics: [
+                {
+                    id: 31,
+                    title: "Responsible AI",
+                    subtitle: "Ethics, Privacy, and Trust for Small Business",
+                    icon: "⚖️",
+                    category: "Ethics & Security",
+                    chapters: [
+                        "Why Ethics Matter for Small Business",
+                        "Core AI Ethics Principles",
+                        "Identifying Ethical Risks",
+                        "Understanding Bias in AI",
+                        "Fairness in Customer-Facing AI",
+                        "Ensuring Fair Outcomes",
+                        "Explainable AI for Business",
+                        "Building Transparent Practices",
+                        "Trust Building Strategies",
+                        "Creating an Ethics Framework",
+                        "Staying Ahead of Regulation"
+                    ],
+                    preview: "Ethics isn't just for big tech. This book helps small businesses navigate AI responsibly, covering bias detection, transparency, privacy protection, and building customer trust. Learn to implement AI in ways that align with your values and strengthen your reputation."
+                },
+                {
+                    id: 32,
+                    title: "Securing Your AI",
+                    subtitle: "Protecting Customer Data and Business Secrets",
+                    icon: "🔒",
+                    category: "Ethics & Security",
+                    chapters: [
+                        "Unique Security Challenges of AI",
+                        "The AI Security Threat Model",
+                        "Securing Training Data",
+                        "Protecting Model Inputs and Outputs",
+                        "Privacy-Preserving Techniques",
+                        "Model Protection",
+                        "Adversarial Defense",
+                        "Supply Chain Security",
+                        "Security Architecture for AI",
+                        "Incident Response for AI"
+                    ],
+                    preview: "AI systems create new security vulnerabilities. This book covers model theft, data poisoning, adversarial attacks, and privacy-preserving techniques. Learn to protect your AI investments and customer data with enterprise-grade security practices scaled for small business."
+                },
+                {
+                    id: 33,
+                    title: "Future-Proof",
+                    subtitle: "Staying Ahead as AI Continues to Evolve",
+                    icon: "🔮",
+                    category: "Ethics & Security",
+                    chapters: [
+                        "The Pace of Change",
+                        "Emerging Technologies",
+                        "Industry Transformation Scenarios",
+                        "Building Adaptable Systems",
+                        "Continuous Learning Organizations",
+                        "Scenario Planning",
+                        "Sustaining Competitive Advantage",
+                        "Innovation Strategies",
+                        "Workforce Evolution",
+                        "The 10-Year Horizon",
+                        "Building Resilience"
+                    ],
+                    preview: "AI is evolving faster than ever. This book helps you prepare for what's next, from multimodal AI to autonomous agents. Learn strategies for building adaptable systems, continuous learning cultures, and resilient business models that thrive no matter what the future brings."
+                }
+            ],
+            cases: [
+                {
+                    id: 34,
+                    title: "Small Business, Big Intelligence",
+                    subtitle: "50 Success Stories of AI Transformation",
+                    icon: "⭐",
+                    category: "Case Studies",
+                    chapters: [
+                        "Manufacturing and Production (Cases 1-5)",
+                        "Retail and E-commerce (Cases 6-10)",
+                        "Professional Services (Cases 11-15)",
+                        "Marketing Innovation (Cases 16-20)",
+                        "Sales Transformation (Cases 21-25)",
+                        "Service Excellence (Cases 26-30)",
+                        "Healthcare and Wellness (Cases 31-35)",
+                        "Food and Hospitality (Cases 36-40)",
+                        "Trades and Construction (Cases 41-45)",
+                        "Creative and Agencies (Cases 46-50)"
+                    ],
+                    preview: "Real stories from real businesses. This book presents 50 detailed case studies of small businesses that transformed their operations with AI. Learn what worked, what didn't, and how to apply these lessons to your own AI journey across every industry and business function."
+                },
+                {
+                    id: 35,
+                    title: "From Skeptic to Believer",
+                    subtitle: "How Real Business Owners Embraced AI",
+                    icon: "💫",
+                    category: "Case Studies",
+                    chapters: [
+                        "The Skeptics' Stories",
+                        "The Transformation Arc",
+                        "The Reluctant Adopter",
+                        "The Early Experimenter",
+                        "The Strategic Implementer",
+                        "The Transformer",
+                        "What Held Them Back",
+                        "What Propelled Them Forward",
+                        "What They Wish They Knew",
+                        "Advice for Fellow Owners"
+                    ],
+                    preview: "Change is hard, especially for business owners who've seen trends come and go. This book shares the personal journeys of owners who overcame their doubts about AI. Their stories of transformation will inspire you and provide practical guidance for your own path from skeptic to believer."
+                }
+            ],
+            quickstart: [
+                {
+                    id: 36,
+                    title: "AI in a Weekend",
+                    subtitle: "Your Fast-Track to AI Implementation",
+                    icon: "🗓️",
+                    category: "Quick Start",
+                    chapters: [
+                        "Friday Evening: Preparation",
+                        "Saturday Morning: First Automations",
+                        "Saturday Afternoon: Content and Communication",
+                        "Sunday Morning: Advanced Features",
+                        "Sunday Afternoon: Launch and Next Steps"
+                    ],
+                    preview: "No time to waste? This weekend warrior guide gets you from zero to AI-powered in just two days. Follow the hour-by-hour plan to set up automations, create content systems, and launch your first AI tools before Monday morning. Perfect for the busy owner who wants results fast."
+                },
+                {
+                    id: 37,
+                    title: "The $100 AI Makeover",
+                    subtitle: "Maximum Impact on a Minimal Budget",
+                    icon: "💵",
+                    category: "Quick Start",
+                    chapters: [
+                        "Maximizing Limited Budget",
+                        "Customer Communication ($0-20)",
+                        "Content Creation ($20-40)",
+                        "Operations ($40-60)",
+                        "Marketing ($60-80)",
+                        "Sales ($80-100)",
+                        "When to Invest More"
+                    ],
+                    preview: "Transform your business for the price of a nice dinner. This practical guide shows you exactly how to allocate $100 across the highest-impact AI tools. From free trials to essential paid services, get the maximum ROI from every dollar spent on your AI transformation."
+                },
+                {
+                    id: 38,
+                    title: "AI Tools Compared",
+                    subtitle: "The Essential Buyer's Guide",
+                    icon: "📋",
+                    category: "Quick Start",
+                    chapters: [
+                        "Writing and Content Tools",
+                        "Image Generation",
+                        "Automation Platforms",
+                        "Customer Service",
+                        "Analytics",
+                        "Choosing the Right Tool"
+                    ],
+                    preview: "Overwhelmed by AI tool options? This comparison guide cuts through the noise with head-to-head evaluations of the leading platforms. See feature comparisons, pricing analysis, and use case recommendations to make informed decisions about which tools deserve your investment."
+                },
+                {
+                    id: 39,
+                    title: "The AI Implementation Checklist",
+                    subtitle: "Your Step-by-Step Success Guide",
+                    icon: "✅",
+                    category: "Quick Start",
+                    chapters: [
+                        "Readiness Assessment",
+                        "Planning Checklist",
+                        "Setup Checklist",
+                        "Data Preparation",
+                        "Deployment Checklist",
+                        "Monitoring Checklist",
+                        "Optimization Checklist"
+                    ],
+                    preview: "Never miss a step. This comprehensive checklist covers every phase of AI implementation, from initial readiness assessment through ongoing optimization. Use it as your project management tool to ensure your AI initiatives stay on track and deliver the results you expect."
+                },
+                {
+                    id: 40,
+                    title: "Talking to Your Team About AI",
+                    subtitle: "Change Management for Small Business",
+                    icon: "💬",
+                    category: "Quick Start",
+                    chapters: [
+                        "Common Employee Fears",
+                        "Reading the Room",
+                        "The Initial Conversation",
+                        "Ongoing Communication",
+                        "Involving the Team",
+                        "Handling Resistance",
+                        "Identifying and Nurturing AI Champions"
+                    ],
+                    preview: "The technology is easy; the people part is hard. This essential guide helps you navigate the conversations that make or break AI adoption. Learn how to address fears, build enthusiasm, and turn your team into AI champions who drive the transformation from within."
+                }
+            ]
+        };
+
+        // Render Books
+        function renderBooks() {
+            renderCategory('foundation-books', books.foundation);
+            renderCategory('strategy-books', books.strategy);
+            renderCategory('operations-books', books.operations);
+            renderCategory('marketing-books', books.marketing);
+            renderCategory('customer-books', books.customer);
+            renderCategory('finance-books', books.finance);
+            renderCategory('industry-books', books.industry);
+            renderCategory('advanced-books', books.advanced);
+            renderCategory('ethics-books', books.ethics);
+            renderCategory('cases-books', books.cases);
+            renderCategory('quickstart-books', books.quickstart);
+        }
+
+        function renderCategory(containerId, bookList) {
+            const container = document.getElementById(containerId);
+            if (!container) return;
+            
+            container.innerHTML = bookList.map(book => `
+                <div class="book-wrapper" data-category="${getCategoryKey(containerId)}">
+                    <div class="book-container" onclick="flipBook(this, ${book.id})">
+                        <div class="book" id="book-${book.id}">
+                            <div class="book-cover">
+                                <div class="cover-pattern"></div>
+                                <div class="book-number">Book ${book.id}</div>
+                                <div class="cover-icon">${book.icon}</div>
+                                <h2 class="book-title">${book.title}</h2>
+                                <div class="cover-decoration"></div>
+                                <p class="book-subtitle">${book.subtitle}</p>
+                                <p class="series-name">The Small Business AI Revolution</p>
+                                <div class="page-corner"></div>
+                            </div>
+                            <div class="book-pages"></div>
+                            <div class="book-spine"></div>
+                            <div class="book-inside">
+                                <div class="inside-content">
+                                    <h3 class="inside-header">📑 Table of Contents</h3>
+                                    <ul class="chapter-list">
+                                        ${book.chapters.map((chapter, i) => `
+                                            <li class="chapter-item">
+                                                <span class="chapter-number">${i + 1}</span>
+                                                ${chapter}
+                                            </li>
+                                        `).join('')}
+                                    </ul>
+                                    <button class="preview-btn" onclick="event.stopPropagation(); openPreview(${book.id})">
+                                        📖 Read Preview
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="book-info">
+                        <h3>${book.title}</h3>
+                        <p class="book-meta">${book.chapters.length} Chapters</p>
+                        <span class="category-tag">${book.category}</span>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function getCategoryKey(containerId) {
+            return containerId.replace('-books', '');
+        }
+
+        // Category Filter
+        function showCategory(category) {
+            // Update active button
+            document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            // Show/hide sections
+            const sections = ['foundation', 'strategy', 'operations', 'marketing', 'customer', 'finance', 'industry', 'advanced', 'ethics', 'cases', 'quickstart'];
+            
+            if (category === 'all') {
+                sections.forEach(s => {
+                    const section = document.getElementById(`section-${s}`);
+                    const books = document.getElementById(`${s}-books`);
+                    if (section) section.classList.remove('hidden');
+                    if (books) books.classList.remove('hidden');
+                });
+            } else {
+                sections.forEach(s => {
+                    const section = document.getElementById(`section-${s}`);
+                    const books = document.getElementById(`${s}-books`);
+                    if (s === category) {
+                        if (section) section.classList.remove('hidden');
+                        if (books) books.classList.remove('hidden');
+                    } else {
+                        if (section) section.classList.add('hidden');
+                        if (books) books.classList.add('hidden');
+                    }
+                });
+            }
+
+            // Scroll to top of books
+            if (category !== 'all') {
+                const targetSection = document.getElementById(`section-${category}`);
+                if (targetSection) {
+                    targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            } else {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        }
+
+        // Flip Animation
+        function flipBook(container, bookId) {
+            const book = container.querySelector('.book');
+            book.classList.toggle('open');
+        }
+
+        // Modal Functions
+        function openPreview(bookId) {
+            const allBooks = [...books.foundation, ...books.strategy, ...books.operations, 
+                            ...books.marketing, ...books.customer, ...books.finance,
+                            ...books.industry, ...books.advanced, ...books.ethics,
+                            ...books.cases, ...books.quickstart];
+            const book = allBooks.find(b => b.id === bookId);
+            
+            if (book) {
+                document.getElementById('modalTitle').textContent = `${book.icon} ${book.title}`;
+                document.getElementById('modalContent').innerHTML = `
+                    <p style="font-style: italic; color: #666; margin-bottom: 20px; font-size: 1.2rem;">
+                        ${book.subtitle}
+                    </p>
+                    <p>${book.preview}</p>
+                    <p style="margin-top: 20px;">
+                        This comprehensive guide covers ${book.chapters.length} essential chapters designed specifically 
+                        for small business owners ready to leverage artificial intelligence. Each chapter includes 
+                        practical exercises, real-world case studies, and actionable strategies you can implement immediately.
+                    </p>
+                    <div style="margin-top: 30px; padding: 20px; background: #f0ebe3; border-radius: 8px;">
+                        <strong style="color: var(--primary);">Inside this book:</strong>
+                        <ul style="margin-top: 10px; padding-left: 20px;">
+                            ${book.chapters.slice(0, 5).map(ch => `<li style="margin: 5px 0;">${ch}</li>`).join('')}
+                            ${book.chapters.length > 5 ? `<li style="margin: 5px 0; color: #888;">...and ${book.chapters.length - 5} more chapters</li>` : ''}
+                        </ul>
+                    </div>
+                `;
+                document.getElementById('previewModal').classList.add('active');
+            }
+        }
+
+        function closeModal() {
+            document.getElementById('previewModal').classList.remove('active');
+        }
+
+        // Close modal on outside click
+        document.getElementById('previewModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
+
+        // Close modal on Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeModal();
+            }
+        });
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', renderBooks);
+    </script>
+</body>
+</html>
