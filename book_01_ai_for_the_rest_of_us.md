@@ -1,3 +1,14 @@
+---
+title: "AI for the Rest of Us"
+subtitle: "A Small Business Owner's First Steps into Artificial Intelligence"
+series: "The Small Business AI Revolution"
+volume: 1
+author: "Adaryus Gillum"
+category: "Foundation"
+tags: [Small Business, AI Basics, Getting Started, Automation, Competitive Advantage]
+icon: "🚀"
+---
+
 # AI for the Rest of Us
 ## A Small Business Owner's First Steps into Artificial Intelligence
 

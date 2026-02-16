@@ -1,3 +1,14 @@
+---
+title: "The Invisible Workforce"
+subtitle: "How AI Agents Can Become Your Most Reliable Employees"
+series: "The Small Business AI Revolution"
+volume: 9
+author: "Adaryus Gillum"
+category: "Operations"
+tags: [AI Agents, Virtual Workforce, Task Automation, Productivity, Team Management]
+icon: "👥"
+---
+
 # The Invisible Workforce: How AI Agents Can Become Your Most Reliable Employees
 
 ## Book 9 of The Small Business AI Revolution Series

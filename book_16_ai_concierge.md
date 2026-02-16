@@ -1,3 +1,14 @@
+---
+title: "The AI Concierge"
+subtitle: "Delivering Enterprise-Level Customer Service on a Small Business Budget"
+series: "The Small Business AI Revolution"
+volume: 16
+author: "Adaryus Gillum"
+category: "Customer Experience"
+tags: [Customer Service, Support Automation, Chat Systems, Customer Experience, Quality]
+icon: "🎩"
+---
+
 # The AI Concierge: Delivering Enterprise-Level Customer Service on a Small Business Budget
 
 ## Book 16 of The Small Business AI Revolution Series

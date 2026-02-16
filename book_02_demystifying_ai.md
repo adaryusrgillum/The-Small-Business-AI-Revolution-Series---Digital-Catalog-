@@ -1,3 +1,14 @@
+---
+title: "Demystifying AI"
+subtitle: "What Every Small Business Needs to Know Before Getting Started"
+series: "The Small Business AI Revolution"
+volume: 2
+author: "Adaryus Gillum"
+category: "Foundation"
+tags: [AI Technology, Understanding AI, AI Pricing, Data Requirements, Decision Making]
+icon: "🔍"
+---
+
 # Demystifying AI: What Every Small Business Needs to Know Before Getting Started
 
 ## Book 2 of The Small Business AI Revolution Series

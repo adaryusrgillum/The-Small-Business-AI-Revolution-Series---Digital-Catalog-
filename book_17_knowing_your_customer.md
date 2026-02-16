@@ -1,3 +1,14 @@
+---
+title: "Knowing Your Customer"
+subtitle: "AI-Driven Personalization for Local and Online Businesses"
+series: "The Small Business AI Revolution"
+volume: 17
+author: "Adaryus Gillum"
+category: "Customer Experience"
+tags: [Personalization, Customer Intelligence, Behavioral Analysis, CRM, Customer Insights]
+icon: "💡"
+---
+
 # Knowing Your Customer: AI-Driven Personalization for Local and Online Businesses
 
 ## Book 17 of The Small Business AI Revolution Series

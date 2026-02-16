@@ -1,3 +1,14 @@
+---
+title: "The Small Business AI Roadmap"
+subtitle: "From Strategy to Implementation"
+series: "The Small Business AI Revolution"
+volume: 4
+author: "Adaryus Gillum"
+category: "Strategy & Planning"
+tags: [Strategy, Planning, Implementation, Project Management, ROI, Risk Management]
+icon: "🗺️"
+---
+
 # The Small Business AI Roadmap: From Strategy to Implementation
 
 ## Book 4 of The Small Business AI Revolution Series

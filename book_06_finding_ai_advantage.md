@@ -1,3 +1,14 @@
+---
+title: "Finding Your AI Advantage"
+subtitle: "Identifying High-Impact Opportunities in Your Business"
+series: "The Small Business AI Revolution"
+volume: 6
+author: "Adaryus Gillum"
+category: "Strategy & Planning"
+tags: [Opportunity Assessment, Competitive Advantage, Process Mapping, Impact Analysis]
+icon: "🎯"
+---
+
 # Finding Your AI Advantage: Identifying High-Impact Opportunities in Your Business
 
 ## Book 6 of The Small Business AI Revolution Series

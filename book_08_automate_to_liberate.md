@@ -1,3 +1,14 @@
+---
+title: "Automate to Liberate"
+subtitle: "Using AI to Free Your Small Business from Busywork"
+series: "The Small Business AI Revolution"
+volume: 8
+author: "Adaryus Gillum"
+category: "Operations"
+tags: [Automation, Productivity, Workflow, Time Management, Efficiency]
+icon: "🤖"
+---
+
 # Automate to Liberate: Using AI to Free Your Small Business from Busywork
 
 ## Book 8 of The Small Business AI Revolution Series

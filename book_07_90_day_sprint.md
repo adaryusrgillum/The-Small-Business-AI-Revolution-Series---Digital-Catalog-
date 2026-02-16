@@ -1,3 +1,14 @@
+---
+title: "The 90-Day AI Sprint"
+subtitle: "A Practical Implementation Framework for Small Teams"
+series: "The Small Business AI Revolution"
+volume: 7
+author: "Adaryus Gillum"
+category: "Strategy & Planning"
+tags: [Implementation, Sprint Framework, Project Management, Quick Wins, Agile]
+icon: "⚡"
+---
+
 # The 90-Day AI Sprint: A Practical Implementation Framework for Small Teams
 
 ## Book 7 of The Small Business AI Revolution Series

@@ -1,3 +1,14 @@
+---
+title: "The Crystal Ball CFO"
+subtitle: "AI for Financial Forecasting and Risk Management"
+series: "The Small Business AI Revolution"
+volume: 19
+author: "Adaryus Gillum"
+category: "Finance"
+tags: [Financial Forecasting, Risk Management, Cash Flow, Financial Planning, Analytics]
+icon: "💎"
+---
+
 # The Crystal Ball CFO: AI for Financial Forecasting and Risk Management
 
 ## Book 19 of The Small Business AI Revolution Series
