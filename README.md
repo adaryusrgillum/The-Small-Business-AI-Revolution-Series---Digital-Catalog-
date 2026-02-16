@@ -24,6 +24,8 @@ The Small Business AI Revolution Series is a comprehensive collection of books d
 
 ## 📖 Complete Book Catalog
 
+> **📚 Documentation**: See [ACCESSIBILITY.md](ACCESSIBILITY.md) for content guidelines | [DEPLOYMENT.md](DEPLOYMENT.md) for GitHub Pages setup | [CHANGELOG.md](CHANGELOG.md) for version history
+
 ### Foundation (Books 1-3)
 Get started with AI fundamentals, understanding how it works, and preparing your mindset for transformation.
 
@@ -177,7 +179,10 @@ To view the digital catalog:
 
 ### For Contributors
 
-We welcome contributions to improve these materials! Please see our [Contributing Guidelines](#) *(coming soon)*.
+We welcome contributions to improve these materials! Please see our guidelines:
+- [ACCESSIBILITY.md](ACCESSIBILITY.md) - Content and accessibility standards
+- [LINK_VALIDATION.md](LINK_VALIDATION.md) - Link validation procedures
+- [RELEASE.md](RELEASE.md) - Release preparation process
 
 ---
 
