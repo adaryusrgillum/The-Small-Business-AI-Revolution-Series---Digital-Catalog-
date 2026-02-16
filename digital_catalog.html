@@ -1805,7 +1805,7 @@
                         
                         const markdown = await response.text();
                         
-                        // Convert markdown to HTML using marked.js
+                        // Convert markdown to HTML using simple markdown parser
                         const html = marked.parse(markdown);
                         
                         // Display the full book content
@@ -1833,7 +1833,8 @@
                             <div style="margin-top: 30px; padding: 20px; background: #f0ebe3; border-radius: 8px;">
                                 <strong style="color: var(--primary);">Inside this book:</strong>
                                 <ul style="margin-top: 10px; padding-left: 20px;">
-                                    ${book.chapters.map(ch => `<li style="margin: 5px 0;">${ch}</li>`).join('')}
+                                    ${book.chapters.slice(0, 5).map(ch => `<li style="margin: 5px 0;">${ch}</li>`).join('')}
+                                    ${book.chapters.length > 5 ? `<li style="margin: 5px 0; color: #888;">...and ${book.chapters.length - 5} more chapters</li>` : ''}
                                 </ul>
                             </div>
                         `;

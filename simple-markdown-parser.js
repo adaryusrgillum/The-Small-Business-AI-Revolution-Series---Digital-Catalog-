@@ -1,8 +1,8 @@
 // Simple markdown to HTML parser for basic markdown features
 function parseMarkdown(markdown) {
+    // Note: This parser is designed for trusted markdown content from the repository
+    // It does not sanitize HTML to allow for intentional HTML in markdown if present
     let html = markdown;
-    
-    // Escape HTML to prevent XSS, but we'll process markdown first
     // Convert headers (must be done before other replacements)
     html = html.replace(/^### (.*$)/gim, '<h3>$1</h3>');
     html = html.replace(/^## (.*$)/gim, '<h2>$1</h2>');
@@ -25,9 +25,13 @@ function parseMarkdown(markdown) {
     html = html.replace(/^\* (.*$)/gim, '<li>$1</li>');
     html = html.replace(/^\d+\. (.*$)/gim, '<li>$1</li>');
     
-    // Wrap consecutive <li> tags in <ul>
-    html = html.replace(/(<li>.*<\/li>\n?)+/gim, function(match) {
-        return '<ul>' + match + '</ul>';
+    // Wrap consecutive <li> tags in <ul> (process once to avoid nested ul tags)
+    html = html.replace(/(<li>.*?<\/li>\s*)+/gm, function(match) {
+        // Only wrap if not already wrapped
+        if (!match.includes('<ul>')) {
+            return '<ul>' + match + '</ul>';
+        }
+        return match;
     });
     
     // Convert blockquotes
@@ -39,7 +43,8 @@ function parseMarkdown(markdown) {
     // Convert paragraphs (lines separated by blank lines)
     html = html.split('\n\n').map(para => {
         para = para.trim();
-        if (para && !para.match(/^<[h|u|o|b]/)) {
+        // Don't wrap if it's already an HTML tag (h, u, o, b, or l for lists)
+        if (para && !para.match(/^<[huobl]/)) {
             return '<p>' + para.replace(/\n/g, '<br>') + '</p>';
         }
         return para;
