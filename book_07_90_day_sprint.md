@@ -1,6 +1,24 @@
 # The 90-Day AI Sprint: A Practical Implementation Framework for Small Teams
 
-## Book 7 of The Small Business AI Revolution Series
+**Book 7 of The Small Business AI Revolution Series**
+
+**By Adaryus Gillum**
+
+---
+
+## Copyright Page
+
+Copyright © 2026 by Adaryus Gillum. All rights reserved.
+
+No part of this publication may be reproduced, distributed, or transmitted in any form or by any means, including photocopying, recording, or other electronic or mechanical methods, without the prior written permission of the publisher, except in the case of brief quotations embodied in critical reviews and certain other noncommercial uses permitted by copyright law.
+
+**Author:** Adaryus Gillum
+
+**Publisher:** The Small Business AI Revolution Series
+
+**First Edition:** 2026
+
+**Disclaimer:** This book is for informational purposes only. The author and publisher disclaim any liability for any loss or damage arising from the use of information contained in this book. While every effort has been made to ensure the accuracy of the information presented, the field of artificial intelligence is rapidly evolving, and readers should verify current information before making business decisions.
 
 ---
 
@@ -3670,6 +3688,46 @@ Your AI journey starts with a single sprint. Make it count.
 
 ---
 
-*Book 7 of The Small Business AI Revolution Series*
+# References and Works Cited
 
-*© 2024 - All Rights Reserved*
+## MLA Format (9th Edition)
+
+Agile Alliance. "Agile Methodology." *Agile Alliance Resources*, 2024, www.agilealliance.org.
+
+Anthropic. *Claude: AI Assistant*. Anthropic, 2024, www.anthropic.com.
+
+Google LLC. *Project Management Tools*. Google, 2024, workspace.google.com.
+
+Knapp, Jake, et al. *Sprint: How to Solve Big Problems and Test New Ideas in Just Five Days*. Simon & Schuster, 2016.
+
+OpenAI. *ChatGPT: Conversational AI*. OpenAI, 2024, openai.com.
+
+Sutherland, Jeff. *Scrum: The Art of Doing Twice the Work in Half the Time*. Crown Business, 2014.
+
+## APA Format (7th Edition)
+
+Agile Alliance. (2024). Agile methodology. *Agile Alliance Resources*. https://www.agilealliance.org
+
+Anthropic. (2024). *Claude: AI assistant*. https://www.anthropic.com
+
+Google LLC. (2024). *Project management tools*. https://workspace.google.com
+
+Knapp, J., Zeratsky, J., & Kowitz, B. (2016). *Sprint: How to solve big problems and test new ideas in just five days*. Simon & Schuster.
+
+OpenAI. (2024). *ChatGPT: Conversational AI*. https://openai.com
+
+Sutherland, J. (2014). *Scrum: The art of doing twice the work in half the time*. Crown Business.
+
+---
+
+## About the Author
+
+**Adaryus Gillum** is a leading voice in the democratization of artificial intelligence for small businesses. With extensive experience in technology implementation and business transformation, Gillum has dedicated his career to helping small business owners understand and leverage AI technologies to compete more effectively in the modern marketplace. Through *The Small Business AI Revolution Series*, he provides practical, accessible guidance that bridges the gap between cutting-edge technology and everyday business applications.
+
+---
+
+*End of Book 7: The 90-Day AI Sprint*
+
+**By Adaryus Gillum**
+
+*Next: Book 8 - Automate to Liberate: Using AI to Free Your Small Business from Busywork*

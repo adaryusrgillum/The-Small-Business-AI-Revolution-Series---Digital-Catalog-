@@ -1,6 +1,24 @@
 # The AI Mindset Shift: Preparing Your Small Business for the Intelligence Age
 
-## Book 3 of The Small Business AI Revolution Series
+**Book 3 of The Small Business AI Revolution Series**
+
+**By Adaryus Gillum**
+
+---
+
+## Copyright Page
+
+Copyright © 2026 by Adaryus Gillum. All rights reserved.
+
+No part of this publication may be reproduced, distributed, or transmitted in any form or by any means, including photocopying, recording, or other electronic or mechanical methods, without the prior written permission of the publisher, except in the case of brief quotations embodied in critical reviews and certain other noncommercial uses permitted by copyright law.
+
+**Author:** Adaryus Gillum
+
+**Publisher:** The Small Business AI Revolution Series
+
+**First Edition:** 2026
+
+**Disclaimer:** This book is for informational purposes only. The author and publisher disclaim any liability for any loss or damage arising from the use of information contained in this book. While every effort has been made to ensure the accuracy of the information presented, the field of artificial intelligence is rapidly evolving, and readers should verify current information before making business decisions.
 
 ---
 
@@ -3306,21 +3324,46 @@ For information about consulting support or speaking engagements related to this
 
 ---
 
-*Copyright © 2024*
-*All rights reserved*
+# References and Works Cited
 
-*No part of this publication may be reproduced, distributed, or transmitted in any form or by any means without the prior written permission of the publisher.*
+## MLA Format (9th Edition)
+
+Anthropic. *Claude: AI Assistant*. Anthropic, 2024, www.anthropic.com.
+
+Dweck, Carol S. *Mindset: The New Psychology of Success*. Ballantine Books, 2007.
+
+Harvard Business Review. "How AI Will Change Strategy." *Harvard Business Review*, 2024, hbr.org.
+
+McKinsey & Company. "The State of AI in 2024." *McKinsey Global Institute*, 2024, www.mckinsey.com.
+
+OpenAI. *ChatGPT: Conversational AI*. OpenAI, 2024, openai.com.
+
+Senge, Peter M. *The Fifth Discipline: The Art & Practice of The Learning Organization*. Currency, 2006.
+
+## APA Format (7th Edition)
+
+Anthropic. (2024). *Claude: AI assistant*. https://www.anthropic.com
+
+Dweck, C. S. (2007). *Mindset: The new psychology of success*. Ballantine Books.
+
+Harvard Business Review. (2024). How AI will change strategy. *Harvard Business Review*. https://hbr.org
+
+McKinsey & Company. (2024). *The state of AI in 2024*. McKinsey Global Institute. https://www.mckinsey.com
+
+OpenAI. (2024). *ChatGPT: Conversational AI*. https://openai.com
+
+Senge, P. M. (2006). *The fifth discipline: The art & practice of the learning organization*. Currency.
 
 ---
 
-**The Small Business AI Revolution Series**
+## About the Author
 
-Book 1: [Title]
-Book 2: [Title]
-**Book 3: The AI Mindset Shift: Preparing Your Small Business for the Intelligence Age**
-Book 4: [Title]
-Book 5: [Title]
+**Adaryus Gillum** is a leading voice in the democratization of artificial intelligence for small businesses. With extensive experience in technology implementation and business transformation, Gillum has dedicated his career to helping small business owners understand and leverage AI technologies to compete more effectively in the modern marketplace. Through *The Small Business AI Revolution Series*, he provides practical, accessible guidance that bridges the gap between cutting-edge technology and everyday business applications.
 
 ---
 
-*For every small business owner ready to embrace the future.*
+*End of Book 3: The AI Mindset Shift*
+
+**By Adaryus Gillum**
+
+*Next: Book 4 - The Small Business AI Roadmap: From Strategy to Implementation*

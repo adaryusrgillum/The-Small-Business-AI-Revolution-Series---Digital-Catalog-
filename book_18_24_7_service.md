@@ -1,6 +1,24 @@
 # 24/7 Service, Zero Headcount: Building AI-Powered Customer Support Systems
 
-## Book 18 of The Small Business AI Revolution Series
+**Book 18 of The Small Business AI Revolution Series**
+
+**By Adaryus Gillum**
+
+---
+
+## Copyright Page
+
+Copyright © 2026 by Adaryus Gillum. All rights reserved.
+
+No part of this publication may be reproduced, distributed, or transmitted in any form or by any means, including photocopying, recording, or other electronic or mechanical methods, without the prior written permission of the publisher, except in the case of brief quotations embodied in critical reviews and certain other noncommercial uses permitted by copyright law.
+
+**Author:** Adaryus Gillum
+
+**Publisher:** The Small Business AI Revolution Series
+
+**First Edition:** 2026
+
+**Disclaimer:** This book is for informational purposes only. The author and publisher disclaim any liability for any loss or damage arising from the use of information contained in this book. While every effort has been made to ensure the accuracy of the information presented, the field of artificial intelligence is rapidly evolving, and readers should verify current information before making business decisions.
 
 ---
 
@@ -1430,6 +1448,46 @@ Welcome to the 24/7 revolution.
 
 ---
 
-**Word Count: Approximately 22,000 words**
+# References and Works Cited
 
-*Book 18 of The Small Business AI Revolution Series*
+## MLA Format (9th Edition)
+
+Anthropic. *Claude: AI Assistant*. Anthropic, 2024, www.anthropic.com.
+
+Help Scout. *Help Scout: Customer Support Platform*. Help Scout, 2024, www.helpscout.com.
+
+Intercom Inc. *Intercom: Customer Messaging Platform*. Intercom, 2024, www.intercom.com.
+
+LiveChat Inc. *LiveChat: Customer Service Software*. LiveChat, 2024, www.livechat.com.
+
+OpenAI. *ChatGPT: Conversational AI*. OpenAI, 2024, openai.com.
+
+Tidio Inc. *Tidio: Live Chat and Chatbots*. Tidio, 2024, www.tidio.com.
+
+## APA Format (7th Edition)
+
+Anthropic. (2024). *Claude: AI assistant*. https://www.anthropic.com
+
+Help Scout. (2024). *Help Scout: Customer support platform*. https://www.helpscout.com
+
+Intercom Inc. (2024). *Intercom: Customer messaging platform*. https://www.intercom.com
+
+LiveChat Inc. (2024). *LiveChat: Customer service software*. https://www.livechat.com
+
+OpenAI. (2024). *ChatGPT: Conversational AI*. https://openai.com
+
+Tidio Inc. (2024). *Tidio: Live chat and chatbots*. https://www.tidio.com
+
+---
+
+## About the Author
+
+**Adaryus Gillum** is a leading voice in the democratization of artificial intelligence for small businesses. With extensive experience in technology implementation and business transformation, Gillum has dedicated his career to helping small business owners understand and leverage AI technologies to compete more effectively in the modern marketplace. Through *The Small Business AI Revolution Series*, he provides practical, accessible guidance that bridges the gap between cutting-edge technology and everyday business applications.
+
+---
+
+*End of Book 18: 24/7 Service, Zero Headcount*
+
+**By Adaryus Gillum**
+
+*Next: Book 19 - The Crystal Ball CFO: AI for Financial Forecasting and Risk Management*

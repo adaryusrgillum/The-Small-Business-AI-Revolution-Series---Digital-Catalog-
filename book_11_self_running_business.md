@@ -1,6 +1,24 @@
-# Book 11: The Self-Running Business: AI Systems for Inventory, Scheduling, and Customer Management
+# The Self-Running Business: AI Systems for Inventory, Scheduling, and Customer Management
 
-## The Small Business AI Revolution Series
+**Book 11 of The Small Business AI Revolution Series**
+
+**By Adaryus Gillum**
+
+---
+
+## Copyright Page
+
+Copyright © 2026 by Adaryus Gillum. All rights reserved.
+
+No part of this publication may be reproduced, distributed, or transmitted in any form or by any means, including photocopying, recording, or other electronic or mechanical methods, without the prior written permission of the publisher, except in the case of brief quotations embodied in critical reviews and certain other noncommercial uses permitted by copyright law.
+
+**Author:** Adaryus Gillum
+
+**Publisher:** The Small Business AI Revolution Series
+
+**First Edition:** 2026
+
+**Disclaimer:** This book is for informational purposes only. The author and publisher disclaim any liability for any loss or damage arising from the use of information contained in this book. While every effort has been made to ensure the accuracy of the information presented, the field of artificial intelligence is rapidly evolving, and readers should verify current information before making business decisions.
 
 ---
 
@@ -2683,4 +2701,50 @@ The autonomous era begins now.
 
 ---
 
-*Word Count: Approximately 28,000 words*
+# References and Works Cited
+
+## MLA Format (9th Edition)
+
+Anthropic. *Claude: AI Assistant*. Anthropic, 2024, www.anthropic.com.
+
+Cin7. *Cin7: Inventory Management System*. Cin7, 2024, www.cin7.com.
+
+Google LLC. *Google Calendar API*. Google, 2024, developers.google.com/calendar.
+
+Microsoft Corporation. *Dynamics 365 Business Central*. Microsoft, 2024, dynamics.microsoft.com/business-central.
+
+OpenAI. *ChatGPT: Conversational AI*. OpenAI, 2024, openai.com.
+
+Square Inc. *Square for Retail*. Square, 2024, squareup.com/us/en/retail.
+
+TradeGecko (QuickBooks Commerce). *Inventory and Order Management*. Intuit, 2024, quickbooks.intuit.com/commerce.
+
+## APA Format (7th Edition)
+
+Anthropic. (2024). *Claude: AI assistant*. https://www.anthropic.com
+
+Cin7. (2024). *Cin7: Inventory management system*. https://www.cin7.com
+
+Google LLC. (2024). *Google Calendar API*. https://developers.google.com/calendar
+
+Microsoft Corporation. (2024). *Dynamics 365 Business Central*. https://dynamics.microsoft.com/business-central
+
+OpenAI. (2024). *ChatGPT: Conversational AI*. https://openai.com
+
+Square Inc. (2024). *Square for Retail*. https://squareup.com/us/en/retail
+
+TradeGecko. (2024). *Inventory and order management*. https://quickbooks.intuit.com/commerce
+
+---
+
+## About the Author
+
+**Adaryus Gillum** is a leading voice in the democratization of artificial intelligence for small businesses. With extensive experience in technology implementation and business transformation, Gillum has dedicated his career to helping small business owners understand and leverage AI technologies to compete more effectively in the modern marketplace. Through *The Small Business AI Revolution Series*, he provides practical, accessible guidance that bridges the gap between cutting-edge technology and everyday business applications.
+
+---
+
+*End of Book 11: The Self-Running Business*
+
+**By Adaryus Gillum**
+
+*Next: Book 16 - The AI Concierge: Delivering Enterprise-Level Customer Service on a Small Business Budget*
